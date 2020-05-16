@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		135B466AE646A42079DA84A8 /* libPods-HZAVPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */; };
+		2540F56E5C031E701F4C4D09 /* libPods-HZAVPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */; };
+		658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2BF226EEDCE00A7D246 /* AppDelegate.m */; };
+		658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2C2226EEDCE00A7D246 /* ViewController.m */; };
+		658DA2C6226EEDCE00A7D246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C4226EEDCE00A7D246 /* Main.storyboard */; };
+		658DA2C8226EEDD000A7D246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C7226EEDD000A7D246 /* Assets.xcassets */; };
+		658DA2CB226EEDD000A7D246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C9226EEDD000A7D246 /* LaunchScreen.storyboard */; };
+		658DA2CE226EEDD000A7D246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2CD226EEDD000A7D246 /* main.m */; };
+		658DA2D8226EEDD000A7D246 /* HZAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */; };
+		658DA2E3226EEDD000A7D246 /* HZAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */; };
+		F481BB709FEBDC1C5937B431 /* libPods-HZAVPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		658DA2D4226EEDD000A7D246 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 658DA2B3226EEDCE00A7D246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 658DA2BA226EEDCE00A7D246;
+			remoteInfo = HZAVPlayer;
+		};
+		658DA2DF226EEDD000A7D246 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 658DA2B3226EEDCE00A7D246 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 658DA2BA226EEDCE00A7D246;
+			remoteInfo = HZAVPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerUITests/Pods-HZAVPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerTests.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerTests/Pods-HZAVPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerTests/Pods-HZAVPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerUITests/Pods-HZAVPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		658DA2BB226EEDCE00A7D246 /* HZAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		658DA2BE226EEDCE00A7D246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		658DA2BF226EEDCE00A7D246 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		658DA2C1226EEDCE00A7D246 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		658DA2C2226EEDCE00A7D246 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		658DA2C5226EEDCE00A7D246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		658DA2C7226EEDD000A7D246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		658DA2CA226EEDD000A7D246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		658DA2CC226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658DA2CD226EEDD000A7D246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		658DA2D3226EEDD000A7D246 /* HZAVPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZAVPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAVPlayerTests.m; sourceTree = "<group>"; };
+		658DA2D9226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAVPlayerUITests.m; sourceTree = "<group>"; };
+		658DA2E4226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		658DA2B8226EEDCE00A7D246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				135B466AE646A42079DA84A8 /* libPods-HZAVPlayer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2D0226EEDD000A7D246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2540F56E5C031E701F4C4D09 /* libPods-HZAVPlayerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2DB226EEDD000A7D246 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F481BB709FEBDC1C5937B431 /* libPods-HZAVPlayerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A852177520D52BB0B91B36C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */,
+				BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */,
+				1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		658DA2B2226EEDCE00A7D246 = {
+			isa = PBXGroup;
+			children = (
+				658DA2BD226EEDCE00A7D246 /* HZAVPlayer */,
+				658DA2D6226EEDD000A7D246 /* HZAVPlayerTests */,
+				658DA2E1226EEDD000A7D246 /* HZAVPlayerUITests */,
+				658DA2BC226EEDCE00A7D246 /* Products */,
+				F517398FA4C232FC3245D19C /* Pods */,
+				0A852177520D52BB0B91B36C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		658DA2BC226EEDCE00A7D246 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				658DA2BB226EEDCE00A7D246 /* HZAVPlayer.app */,
+				658DA2D3226EEDD000A7D246 /* HZAVPlayerTests.xctest */,
+				658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		658DA2BD226EEDCE00A7D246 /* HZAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				658DA2BE226EEDCE00A7D246 /* AppDelegate.h */,
+				658DA2BF226EEDCE00A7D246 /* AppDelegate.m */,
+				658DA2C1226EEDCE00A7D246 /* ViewController.h */,
+				658DA2C2226EEDCE00A7D246 /* ViewController.m */,
+				658DA2C4226EEDCE00A7D246 /* Main.storyboard */,
+				658DA2C7226EEDD000A7D246 /* Assets.xcassets */,
+				658DA2C9226EEDD000A7D246 /* LaunchScreen.storyboard */,
+				658DA2CC226EEDD000A7D246 /* Info.plist */,
+				658DA2CD226EEDD000A7D246 /* main.m */,
+			);
+			path = HZAVPlayer;
+			sourceTree = "<group>";
+		};
+		658DA2D6226EEDD000A7D246 /* HZAVPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */,
+				658DA2D9226EEDD000A7D246 /* Info.plist */,
+			);
+			path = HZAVPlayerTests;
+			sourceTree = "<group>";
+		};
+		658DA2E1226EEDD000A7D246 /* HZAVPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */,
+				658DA2E4226EEDD000A7D246 /* Info.plist */,
+			);
+			path = HZAVPlayerUITests;
+			sourceTree = "<group>";
+		};
+		F517398FA4C232FC3245D19C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */,
+				2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */,
+				1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */,
+				273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */,
+				1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */,
+				3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		658DA2BA226EEDCE00A7D246 /* HZAVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658DA2E7226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayer" */;
+			buildPhases = (
+				1823A272920A276B5C3E7418 /* [CP] Check Pods Manifest.lock */,
+				658DA2B7226EEDCE00A7D246 /* Sources */,
+				658DA2B8226EEDCE00A7D246 /* Frameworks */,
+				658DA2B9226EEDCE00A7D246 /* Resources */,
+				9C8086C209DBE663A2EB14CD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HZAVPlayer;
+			productName = HZAVPlayer;
+			productReference = 658DA2BB226EEDCE00A7D246 /* HZAVPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		658DA2D2226EEDD000A7D246 /* HZAVPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658DA2EA226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerTests" */;
+			buildPhases = (
+				A0A095AA67616154E0339288 /* [CP] Check Pods Manifest.lock */,
+				658DA2CF226EEDD000A7D246 /* Sources */,
+				658DA2D0226EEDD000A7D246 /* Frameworks */,
+				658DA2D1226EEDD000A7D246 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658DA2D5226EEDD000A7D246 /* PBXTargetDependency */,
+			);
+			name = HZAVPlayerTests;
+			productName = HZAVPlayerTests;
+			productReference = 658DA2D3226EEDD000A7D246 /* HZAVPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		658DA2DD226EEDD000A7D246 /* HZAVPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658DA2ED226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerUITests" */;
+			buildPhases = (
+				3C7EBF50BC7B6A8CCE005ADB /* [CP] Check Pods Manifest.lock */,
+				658DA2DA226EEDD000A7D246 /* Sources */,
+				658DA2DB226EEDD000A7D246 /* Frameworks */,
+				658DA2DC226EEDD000A7D246 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				658DA2E0226EEDD000A7D246 /* PBXTargetDependency */,
+			);
+			name = HZAVPlayerUITests;
+			productName = HZAVPlayerUITests;
+			productReference = 658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		658DA2B3226EEDCE00A7D246 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "何鹏";
+				TargetAttributes = {
+					658DA2BA226EEDCE00A7D246 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					658DA2D2226EEDD000A7D246 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 658DA2BA226EEDCE00A7D246;
+					};
+					658DA2DD226EEDD000A7D246 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 658DA2BA226EEDCE00A7D246;
+					};
+				};
+			};
+			buildConfigurationList = 658DA2B6226EEDCE00A7D246 /* Build configuration list for PBXProject "HZAVPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 658DA2B2226EEDCE00A7D246;
+			productRefGroup = 658DA2BC226EEDCE00A7D246 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				658DA2BA226EEDCE00A7D246 /* HZAVPlayer */,
+				658DA2D2226EEDD000A7D246 /* HZAVPlayerTests */,
+				658DA2DD226EEDD000A7D246 /* HZAVPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		658DA2B9226EEDCE00A7D246 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658DA2CB226EEDD000A7D246 /* LaunchScreen.storyboard in Resources */,
+				658DA2C8226EEDD000A7D246 /* Assets.xcassets in Resources */,
+				658DA2C6226EEDCE00A7D246 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2D1226EEDD000A7D246 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2DC226EEDD000A7D246 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1823A272920A276B5C3E7418 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C7EBF50BC7B6A8CCE005ADB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8086C209DBE663A2EB14CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/HZAVPlayer/HZAVPlayerBundles.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HZAVPlayerBundles.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A095AA67616154E0339288 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		658DA2B7226EEDCE00A7D246 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */,
+				658DA2CE226EEDD000A7D246 /* main.m in Sources */,
+				658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2CF226EEDD000A7D246 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658DA2D8226EEDD000A7D246 /* HZAVPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		658DA2DA226EEDD000A7D246 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				658DA2E3226EEDD000A7D246 /* HZAVPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		658DA2D5226EEDD000A7D246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 658DA2BA226EEDCE00A7D246 /* HZAVPlayer */;
+			targetProxy = 658DA2D4226EEDD000A7D246 /* PBXContainerItemProxy */;
+		};
+		658DA2E0226EEDD000A7D246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 658DA2BA226EEDCE00A7D246 /* HZAVPlayer */;
+			targetProxy = 658DA2DF226EEDD000A7D246 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		658DA2C4226EEDCE00A7D246 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				658DA2C5226EEDCE00A7D246 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		658DA2C9226EEDD000A7D246 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				658DA2CA226EEDD000A7D246 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		658DA2E5226EEDD000A7D246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		658DA2E6226EEDD000A7D246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		658DA2E8226EEDD000A7D246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		658DA2E9226EEDD000A7D246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		658DA2EB226EEDD000A7D246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HZAVPlayer.app/HZAVPlayer";
+			};
+			name = Debug;
+		};
+		658DA2EC226EEDD000A7D246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HZAVPlayer.app/HZAVPlayer";
+			};
+			name = Release;
+		};
+		658DA2EE226EEDD000A7D246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HZAVPlayer;
+			};
+			name = Debug;
+		};
+		658DA2EF226EEDD000A7D246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P35S4B7K46;
+				INFOPLIST_FILE = HZAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HZAVPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		658DA2B6226EEDCE00A7D246 /* Build configuration list for PBXProject "HZAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658DA2E5226EEDD000A7D246 /* Debug */,
+				658DA2E6226EEDD000A7D246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658DA2E7226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658DA2E8226EEDD000A7D246 /* Debug */,
+				658DA2E9226EEDD000A7D246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658DA2EA226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658DA2EB226EEDD000A7D246 /* Debug */,
+				658DA2EC226EEDD000A7D246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		658DA2ED226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				658DA2EE226EEDD000A7D246 /* Debug */,
+				658DA2EF226EEDD000A7D246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 658DA2B3226EEDCE00A7D246 /* Project object */;
+}
