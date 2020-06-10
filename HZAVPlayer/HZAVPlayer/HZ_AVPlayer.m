@@ -59,7 +59,7 @@
 
     //静音状态下播放
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-    _cacheMaxPlay = 0;
+//    _cacheMaxPlay = 0;
 }
 
 -(void)layout{
@@ -182,7 +182,7 @@
 -(void)targetWithFileLength:(long long)length error:(NSError *)error{
     
     if (error != nil || length == 0) {
-        [self loadWithState:HPAVPlayerFaile];
+//        [self loadWithState:HPAVPlayerFaile];
         return;
     }
     _fileSize = [HZ_AVPlayerLogic changeMbWithFileLengthKb:length];
@@ -297,20 +297,36 @@
     }
 }
 
--(void)playerCurrentTimeAndCacheTimeRate:(CGFloat)rate{
-    if (_playerBottomView.playerState == NO && rate >= _cacheMaxPlay) {
-//        [_playerManage play];
+//-(void)playerCurrentTimeAndCacheTimeRate:(CGFloat)rate{
+//    if (_playerBottomView.playerState == NO && rate >= _cacheMaxPlay) {
+////        [_playerManage play];
+//        [self loadWithState:HPAVPlayerLoadFinish];
+//    }
+//    else if(rate >= _cacheMaxPlay){
+//        [self loadWithState:HPAVPlayerLoadFinish];
+//    }
+//    else if(rate < _cacheMaxPlay){
+//        [self loadWithState:HPAVPlayerLoading];
+////        [self pause];
+//        [self privatePause];
+//    }
+//
+//}
+
+-(void)playerCurrentTimeIsNeedLoading:(BOOL)isLoading{
+    
+    if (_playerBottomView.playerState == NO && isLoading == NO) {
+        //        [_playerManage play];
         [self loadWithState:HPAVPlayerLoadFinish];
     }
-    else if(rate >= _cacheMaxPlay){
+    else if(isLoading == NO){
         [self loadWithState:HPAVPlayerLoadFinish];
     }
-    else if(rate < _cacheMaxPlay){
+    else if(isLoading == YES){
         [self loadWithState:HPAVPlayerLoading];
-//        [self pause];
+        //        [self pause];
         [self privatePause];
     }
-    
 }
 
 -(void)seeTime:(CGFloat)second{
@@ -395,15 +411,15 @@
             if (self.isHandOpenPlaye == YES) {//外部播放
                 [self privatePlay];
             }
-            [_lineLoadAnimation removeFromSuperview];
+            [self.lineLoadAnimation removeFromSuperview];
         }
         else if(loadState == HPPlayerLoadEnd){
             
-            _playerBottomView.playerState = YES;
-            [_lineLoadAnimation removeFromSuperview];
+            self.playerBottomView.playerState = YES;
+            [self.lineLoadAnimation removeFromSuperview];
         }
         else if (loadState == HPAVPlayerFaile){
-            [_lineLoadAnimation removeFromSuperview];
+            [self.lineLoadAnimation removeFromSuperview];
         }
     });
     
@@ -439,18 +455,18 @@
     
 }
 
--(void)setCacheMaxPlay:(CGFloat)cacheMaxPlay{
-    
-    _cacheMaxPlay = cacheMaxPlay;
-    
-    if (cacheMaxPlay > 1) {
-        cacheMaxPlay = 1;
-    }
-    else if(cacheMaxPlay < 0){
-        cacheMaxPlay = 0.1;
-    }
-    
-}
+//-(void)setCacheMaxPlay:(CGFloat)cacheMaxPlay{
+//    
+//    _cacheMaxPlay = cacheMaxPlay;
+//    
+//    if (cacheMaxPlay > 1) {
+//        cacheMaxPlay = 1;
+//    }
+//    else if(cacheMaxPlay < 0){
+//        cacheMaxPlay = 0.1;
+//    }
+//    
+//}
 
 #pragma mark - 处理点击事件
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

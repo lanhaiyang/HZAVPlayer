@@ -17,6 +17,27 @@
 		658DA2CE226EEDD000A7D246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2CD226EEDD000A7D246 /* main.m */; };
 		658DA2D8226EEDD000A7D246 /* HZAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */; };
 		658DA2E3226EEDD000A7D246 /* HZAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */; };
+		65DA07152490E94600D32DDB /* HZ_AVPlayerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */; };
+		65DA07162490E94600D32DDB /* HZ_AVPlayerRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */; };
+		65DA07172490E94600D32DDB /* HPCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06EA2490E94600D32DDB /* HPCache.m */; };
+		65DA07182490E94600D32DDB /* HZ_DealURLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */; };
+		65DA07192490E94600D32DDB /* HZ_CacheLoadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */; };
+		65DA071A2490E94600D32DDB /* HZ_CacheFileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */; };
+		65DA071B2490E94600D32DDB /* HZ_DealVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */; };
+		65DA071C2490E94600D32DDB /* HZ_CacheLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */; };
+		65DA071D2490E94600D32DDB /* HZ_RequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F62490E94600D32DDB /* HZ_RequestTask.m */; };
+		65DA071E2490E94600D32DDB /* HZ_RequestTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */; };
+		65DA071F2490E94600D32DDB /* HZ_CacheFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */; };
+		65DA07202490E94600D32DDB /* HZ_CacheVideoConfigeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */; };
+		65DA07212490E94600D32DDB /* HZ_AVPlayerLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */; };
+		65DA07222490E94600D32DDB /* HZ_AVPlayerWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */; };
+		65DA07232490E94600D32DDB /* NSString+HZ_Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07062490E94600D32DDB /* NSString+HZ_Time.m */; };
+		65DA07242490E94600D32DDB /* HZ_AVPlayerBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */; };
+		65DA07252490E94600D32DDB /* HZ_AVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */; };
+		65DA07262490E94600D32DDB /* HZ_AVPlayerManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */; };
+		65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */; };
+		65DA07282490E94600D32DDB /* HZ_Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07112490E94600D32DDB /* HZ_Encryption.m */; };
+		65DA07292490E94600D32DDB /* HZ_AVPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */; };
 		F481BB709FEBDC1C5937B431 /* libPods-HZAVPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +82,48 @@
 		658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAVPlayerUITests.m; sourceTree = "<group>"; };
 		658DA2E4226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerHeaderView.m; sourceTree = "<group>"; };
+		65DA06E62490E94600D32DDB /* HZ_AVPlayerRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerRotate.h; sourceTree = "<group>"; };
+		65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerRotate.m; sourceTree = "<group>"; };
+		65DA06EA2490E94600D32DDB /* HPCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCache.m; sourceTree = "<group>"; };
+		65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheLoadViewModel.h; sourceTree = "<group>"; };
+		65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheFileViewModel.h; sourceTree = "<group>"; };
+		65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_DealURLTool.m; sourceTree = "<group>"; };
+		65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_DealVideoTool.h; sourceTree = "<group>"; };
+		65DA06EF2490E94600D32DDB /* HPCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCache.h; sourceTree = "<group>"; };
+		65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheLoadViewModel.m; sourceTree = "<group>"; };
+		65DA06F12490E94600D32DDB /* HZ_DealURLTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_DealURLTool.h; sourceTree = "<group>"; };
+		65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheFileViewModel.m; sourceTree = "<group>"; };
+		65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_DealVideoTool.m; sourceTree = "<group>"; };
+		65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheLoadManager.m; sourceTree = "<group>"; };
+		65DA06F52490E94600D32DDB /* HZ_CacheFileManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheFileManage.h; sourceTree = "<group>"; };
+		65DA06F62490E94600D32DDB /* HZ_RequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_RequestTask.m; sourceTree = "<group>"; };
+		65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_RequestTaskModel.m; sourceTree = "<group>"; };
+		65DA06F92490E94600D32DDB /* HZ_RequestTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_RequestTaskModel.h; sourceTree = "<group>"; };
+		65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheLoadManager.h; sourceTree = "<group>"; };
+		65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheFileManage.m; sourceTree = "<group>"; };
+		65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_RequestTask.h; sourceTree = "<group>"; };
+		65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheVideoConfigeBase.m; sourceTree = "<group>"; };
+		65DA06FF2490E94600D32DDB /* HZ_CacheVideoConfigeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheVideoConfigeBase.h; sourceTree = "<group>"; };
+		65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerBottomView.h; sourceTree = "<group>"; };
+		65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerLogic.m; sourceTree = "<group>"; };
+		65DA07032490E94600D32DDB /* NSString+HZ_Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HZ_Time.h"; sourceTree = "<group>"; };
+		65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerWeb.m; sourceTree = "<group>"; };
+		65DA07052490E94600D32DDB /* HZ_AVPlayerLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerLogic.h; sourceTree = "<group>"; };
+		65DA07062490E94600D32DDB /* NSString+HZ_Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HZ_Time.m"; sourceTree = "<group>"; };
+		65DA07072490E94600D32DDB /* HZ_AVPlayerWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerWeb.h; sourceTree = "<group>"; };
+		65DA07082490E94600D32DDB /* HZ_AVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayer.h; sourceTree = "<group>"; };
+		65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerHeaderView.h; sourceTree = "<group>"; };
+		65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerBottomView.m; sourceTree = "<group>"; };
+		65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayer.m; sourceTree = "<group>"; };
+		65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerManage.m; sourceTree = "<group>"; };
+		65DA070E2490E94600D32DDB /* HZ_Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_Encryption.h; sourceTree = "<group>"; };
+		65DA070F2490E94600D32DDB /* HZ_AVPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerItem.h; sourceTree = "<group>"; };
+		65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVCacheProgress.m; sourceTree = "<group>"; };
+		65DA07112490E94600D32DDB /* HZ_Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_Encryption.m; sourceTree = "<group>"; };
+		65DA07122490E94600D32DDB /* HZ_AVPlayerManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerManage.h; sourceTree = "<group>"; };
+		65DA07132490E94600D32DDB /* HZ_AVCacheProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVCacheProgress.h; sourceTree = "<group>"; };
+		65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerItem.m; sourceTree = "<group>"; };
 		80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +191,7 @@
 		658DA2BD226EEDCE00A7D246 /* HZAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				65DA06E32490E94600D32DDB /* HZAVPlayer */,
 				658DA2BE226EEDCE00A7D246 /* AppDelegate.h */,
 				658DA2BF226EEDCE00A7D246 /* AppDelegate.m */,
 				658DA2C1226EEDCE00A7D246 /* ViewController.h */,
@@ -157,6 +221,111 @@
 				658DA2E4226EEDD000A7D246 /* Info.plist */,
 			);
 			path = HZAVPlayerUITests;
+			sourceTree = "<group>";
+		};
+		65DA06E32490E94600D32DDB /* HZAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */,
+				65DA06E52490E94600D32DDB /* Rotate */,
+				65DA06E82490E94600D32DDB /* Cache */,
+				65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */,
+				65DA07012490E94600D32DDB /* Logic */,
+				65DA07082490E94600D32DDB /* HZ_AVPlayer.h */,
+				65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */,
+				65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */,
+				65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */,
+				65DA070C2490E94600D32DDB /* Player */,
+			);
+			path = HZAVPlayer;
+			sourceTree = "<group>";
+		};
+		65DA06E52490E94600D32DDB /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06E62490E94600D32DDB /* HZ_AVPlayerRotate.h */,
+				65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */,
+			);
+			path = Rotate;
+			sourceTree = "<group>";
+		};
+		65DA06E82490E94600D32DDB /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06E92490E94600D32DDB /* ViewModel */,
+				65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */,
+				65DA06F52490E94600D32DDB /* HZ_CacheFileManage.h */,
+				65DA06F62490E94600D32DDB /* HZ_RequestTask.m */,
+				65DA06F72490E94600D32DDB /* Model */,
+				65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */,
+				65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */,
+				65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */,
+				65DA06FD2490E94600D32DDB /* Base */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		65DA06E92490E94600D32DDB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06EA2490E94600D32DDB /* HPCache.m */,
+				65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */,
+				65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */,
+				65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */,
+				65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */,
+				65DA06EF2490E94600D32DDB /* HPCache.h */,
+				65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */,
+				65DA06F12490E94600D32DDB /* HZ_DealURLTool.h */,
+				65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */,
+				65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		65DA06F72490E94600D32DDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */,
+				65DA06F92490E94600D32DDB /* HZ_RequestTaskModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65DA06FD2490E94600D32DDB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */,
+				65DA06FF2490E94600D32DDB /* HZ_CacheVideoConfigeBase.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65DA07012490E94600D32DDB /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */,
+				65DA07032490E94600D32DDB /* NSString+HZ_Time.h */,
+				65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */,
+				65DA07052490E94600D32DDB /* HZ_AVPlayerLogic.h */,
+				65DA07062490E94600D32DDB /* NSString+HZ_Time.m */,
+				65DA07072490E94600D32DDB /* HZ_AVPlayerWeb.h */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		65DA070C2490E94600D32DDB /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */,
+				65DA070E2490E94600D32DDB /* HZ_Encryption.h */,
+				65DA070F2490E94600D32DDB /* HZ_AVPlayerItem.h */,
+				65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */,
+				65DA07112490E94600D32DDB /* HZ_Encryption.m */,
+				65DA07122490E94600D32DDB /* HZ_AVPlayerManage.h */,
+				65DA07132490E94600D32DDB /* HZ_AVCacheProgress.h */,
+				65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		F517398FA4C232FC3245D19C /* Pods */ = {
@@ -397,9 +566,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DA07292490E94600D32DDB /* HZ_AVPlayerItem.m in Sources */,
+				65DA07212490E94600D32DDB /* HZ_AVPlayerLogic.m in Sources */,
+				65DA071A2490E94600D32DDB /* HZ_CacheFileViewModel.m in Sources */,
+				65DA071B2490E94600D32DDB /* HZ_DealVideoTool.m in Sources */,
+				65DA07172490E94600D32DDB /* HPCache.m in Sources */,
 				658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */,
+				65DA07182490E94600D32DDB /* HZ_DealURLTool.m in Sources */,
+				65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */,
+				65DA07192490E94600D32DDB /* HZ_CacheLoadViewModel.m in Sources */,
+				65DA07202490E94600D32DDB /* HZ_CacheVideoConfigeBase.m in Sources */,
+				65DA071C2490E94600D32DDB /* HZ_CacheLoadManager.m in Sources */,
+				65DA07252490E94600D32DDB /* HZ_AVPlayer.m in Sources */,
 				658DA2CE226EEDD000A7D246 /* main.m in Sources */,
+				65DA07232490E94600D32DDB /* NSString+HZ_Time.m in Sources */,
+				65DA071D2490E94600D32DDB /* HZ_RequestTask.m in Sources */,
+				65DA07162490E94600D32DDB /* HZ_AVPlayerRotate.m in Sources */,
+				65DA071E2490E94600D32DDB /* HZ_RequestTaskModel.m in Sources */,
 				658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */,
+				65DA07222490E94600D32DDB /* HZ_AVPlayerWeb.m in Sources */,
+				65DA07152490E94600D32DDB /* HZ_AVPlayerHeaderView.m in Sources */,
+				65DA07262490E94600D32DDB /* HZ_AVPlayerManage.m in Sources */,
+				65DA071F2490E94600D32DDB /* HZ_CacheFileManage.m in Sources */,
+				65DA07282490E94600D32DDB /* HZ_Encryption.m in Sources */,
+				65DA07242490E94600D32DDB /* HZ_AVPlayerBottomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

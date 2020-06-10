@@ -154,7 +154,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
  >1 默认为1
  <0 默认为0.1
  */
-@property(nonatomic,assign) CGFloat cacheMaxPlay;
+//@property(nonatomic,assign) CGFloat cacheMaxPlay;
 
 /**
  播放的url

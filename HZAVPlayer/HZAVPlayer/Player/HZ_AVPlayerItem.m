@@ -49,7 +49,7 @@
     
     if ([keyPath isEqualToString:@"status"]) {
         AVPlayerStatus status = [[change objectForKey:@"new"] intValue]; // 获取更改后的状态
-        
+
         if (status == AVPlayerStatusReadyToPlay) {
             
             if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
@@ -59,7 +59,7 @@
             //NSLog(@"AVPlayerStatusFailed");
             _itemError = self.error;
             if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
-                [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverFailed];
+//                [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverFailed];
             }
         } else {
             //NSLog(@"AVPlayerStatusUnknown");

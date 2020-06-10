@@ -9,22 +9,20 @@
 #import "HZ_AVPlayerManage.h"
 #import <AVFoundation/AVFoundation.h>
 #import "HZ_AVCacheProgress.h"
-#import "HZ_TVideoLoadManager.h"
-#import "HZ_TVideoFileManager.h"
+#import "HZ_CacheLoadManager.h"
 #import "HZ_Encryption.h"
 #import "HZ_AVPlayerItem.h"
 
-@interface HZ_AVPlayerManage()<VideoLoadManagerProtocol,HZ_AVPlayerItemObserverDelegate>
+@interface HZ_AVPlayerManage()<HZ_AVPlayerItemObserverDelegate,HZ_CacheLoadManagerDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayerItem *playerItem;
 @property(nonatomic,strong) AVPlayer *player;
 @property(nonatomic,strong) AVPlayerLayer *playerLayer;
-@property(nonatomic,strong) HZ_TVideoLoadManager *videoLoader;
+@property(nonatomic,strong) HZ_CacheLoadManager *loadManage;
 
 @property(nonatomic,assign) float currentPlayTime;
 
 @property(nonatomic,strong) id playTimeObserver;
-//@property(nonatomic,assign) BOOL isIntoBackground;
 
 @property(nonatomic,assign) BOOL isSliding;//是否在滑动
 
@@ -95,10 +93,9 @@
 
 -(void)updateChangePlayeWithTimeSecond:(CGFloat)second{
     
+    
+    [self.loadManage isSlideProgress];//正在滑动
     [_playerItem cancelPendingSeeks];
-    //    [self pause];
-    // 跳转到拖拽秒处
-    //    CGFloat fps = [[[_playerItem.asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] nominalFrameRate];
     CMTime changedTime = CMTimeMakeWithSeconds(second, 1000);
     if (changedTime.timescale < 0) {
         return;
@@ -134,31 +131,9 @@
 -(void)stop{
     [_player pause];
     [self removeObserveAndNOtification];
-    [self reset];
     _isPlay = NO;
 }
 
-- (void)reset
-{
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        [self.videoLoader cancelDownLoad];
-        self.videoLoader = nil;
-        [self.playerItem.asset cancelLoading];
-    });
-    
-    AVURLAsset* temp = (AVURLAsset*)self.playerItem.asset;
-    [temp.resourceLoader setDelegate:nil queue:nil];
-    if ([NSThread isMainThread] == NO) {
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            [self.playerLayer  setPlayer:nil];
-        });
-    }else{
-        [self.playerLayer setPlayer:nil];
-    }
-    
-    self.player = nil;
-    
-}
 
 -(UIImage *)videoFristFrameWithImage{
     
@@ -218,17 +193,8 @@
  *  添加观察者 、通知 、监听播放进度
  */
 - (void)addObserverAndNotification {
-//    if (_isObserver == YES) {
-//        return;
-//    }
-//    _isObserver = YES;
-//    [_playerItem addObserver:self forKeyPath:@"status" options:(NSKeyValueObservingOptionNew) context:nil]; // 观察status属性， 一共有三种属性
-//    [_playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil]; // 观察缓冲进度
-//
-//    [self.playerItem addObserver:self forKeyPath:@"playbackBufferEmpty" options:NSKeyValueObservingOptionNew context:nil];
-//    [self.playerItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil];
-//
-//
+    
+    
     [self monitoringPlayback:_playerItem]; // 监听播放
     [self addNotification]; // 添加通知
 }
@@ -292,6 +258,7 @@
     if (_cyclePlayer == NO) {
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
+            [self loadWithState:HPAVPlayerEnd];
             [self updateChangePlayeWithTimeSecond:0];
             [weakSelf pause];
         }]; // 跳转到初始
@@ -299,12 +266,12 @@
     else{
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
+            [self loadWithState:HPAVPlayerEnd];
             [self updateChangePlayeWithTimeSecond:0];
             [weakSelf play];
         }];
     }
     
-    [self loadWithState:HPAVPlayerEnd];
 }
 
 
@@ -322,34 +289,35 @@
         currentRate = 0;
     }
     
-//    float currentAndCacheRate = cacheTimeRate - currentRate;
-//    float currentAndCacheRate = self.currentPlayTime/cacheTime;
-//
-//    if (currentAndCacheRate > 1) {
-//        currentAndCacheRate = 0;//缓冲还没准备好
-//    }
-    
     float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
-    
+    BOOL isNeedLoading = NO;
     if (currentAndCacheTimeRate <= 0) {
         // 播放超过缓存
         currentAndCacheTimeRate = 0;
-    }
-    else if(currentAndCacheTimeRate > 0){
+    }else if(currentAndCacheTimeRate > 0){
         
 //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
-        currentAndCacheTimeRate = cacheTime/self.durationLength;
+//        currentAndCacheTimeRate = cacheTime/self.durationLength;
+        NSInteger loadingTimeLength = self.durationLength * 0.05;
+        loadingTimeLength = _currentPlayTime + loadingTimeLength;
+        
         if (cacheTime >= self.durationLength) {
             //加载完所有
-            currentAndCacheTimeRate = 1;
+//            currentAndCacheTimeRate = 1;
+            isNeedLoading = NO;
+        }else if(loadingTimeLength <= cacheTime){
+            
+            isNeedLoading = NO;
+        }else{
+            
+            isNeedLoading = YES;
         }
     }
     
     
-    if ([self.delegate respondsToSelector:@selector(playerCurrentTimeAndCacheTimeRate:)]) {
+    if ([self.delegate respondsToSelector:@selector(playerCurrentTimeIsNeedLoading:)]) {
         
-        [self.delegate playerCurrentTimeAndCacheTimeRate:currentAndCacheTimeRate];
-        
+        [self.delegate playerCurrentTimeIsNeedLoading:isNeedLoading];
     }
     
 }
@@ -382,20 +350,14 @@
             }
             self.playerItem = [HZ_AVPlayerItem hz_playerItemWithAsset:videoAsset];
             self.playerItem.hz_observer = self;
-        }
-        else{
+        } else{
             self.playerItem = [HZ_AVPlayerItem hz_initWithURL:[NSURL URLWithString:url]];
             self.playerItem.hz_observer = self;
         }
         
         if (self.player == nil) {
             self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
-//            if([[UIDevice currentDevice] systemVersion].intValue>=10){
-//            //      增加下面这行可以解决iOS10兼容性问题了
-//                self.player.automaticallyWaitsToMinimizeStalling = NO;
-//                [self.player playImmediatelyAtRate:1];
-//                self.playerItem.preferredForwardBufferDuration = 1;
-//            }
+            
             self.playerLayer = nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -416,21 +378,30 @@
     
 }
 
-- (AVURLAsset *)generateAVURLAssetUrl:(NSString *)url videoName:(NSString *)videoName
-{
+- (AVURLAsset *)generateAVURLAssetUrl:(NSString *)url videoName:(NSString *)videoName {
     AVURLAsset *videoAsset = nil;
     if ([url containsString:@".m3u8"]) {
         videoAsset = [AVURLAsset assetWithURL:[NSURL URLWithString:url]];
         return videoAsset;
     }
-    if ( [HZ_TVideoFileManager hasFinishedVideoCache:videoName]) {  //区分 直播和 点播
-        videoAsset = [AVURLAsset assetWithURL:[HZ_TVideoFileManager cacheFileExistsWithName:videoName]];
-    } else  {
-        videoAsset = [AVURLAsset URLAssetWithURL:[NSURL URLWithString:[HZ_TVideoLoadManager encryptionDownLoadUrl:url]]  options:nil];
-        _videoLoader = [[HZ_TVideoLoadManager alloc]initWithFileName:videoName];
-        _videoLoader.delegate = self;
-        [videoAsset.resourceLoader setDelegate:_videoLoader queue:dispatch_get_global_queue(0, 0)];
+    
+    NSURL *webURL = [NSURL URLWithString:url];
+    
+    NSString * cacheFilePath = [HZ_CacheLoadManager filePathIsExistWithURL:webURL];
+    if (cacheFilePath) {
+        NSURL * url = [NSURL fileURLWithPath:cacheFilePath];
+        videoAsset = [AVURLAsset assetWithURL:url];
+        
+    }else {
+        //没有缓存播放网络文件
+        self.loadManage = [[HZ_CacheLoadManager alloc]init];
+        self.loadManage.delegate = self;
+    
+        videoAsset = [self.loadManage getURLAssetObjectWithURL:webURL];
+        [videoAsset.resourceLoader setDelegate:self.loadManage queue:dispatch_get_main_queue()];
     }
+    
+    
     return videoAsset;
 }
 
@@ -462,22 +433,66 @@
     }
 }
 
-#pragma mark - Load manager
+#pragma mark - HZ_CacheLoadManagerDelegate
 
-- (void)requestNetError{
-    //    //NSLog(@"downLoad net work error");
-
-    [_videoLoader cancelDownLoad];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        //NSLog(@"AVPlayerStatusFailed");
-        _error = [NSError errorWithDomain:NSURLErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey:@"Error down url"}];
-        [self playerStatusOccureError];
-//        [self reset];
-//        if ([self.delegate respondsToSelector:@selector(loadWithState:)]) {
-//
-//            [self.delegate loadWithState:HPLoadFinish];
-//        }
-    });
+-(void)hz_requestTaskWithState:(HZ_RequestTaskState)state error:(NSError *)error{
+    
+    switch (state) {
+        case HZ_RequestTaskSuccess:{
+            
+        }
+            break;
+        case HZ_RequestTaskFailse:{
+            
+            _error = error;
+            [self playerStatusOccureError];
+            [self pause];
+        }
+            break;
+        case HZ_RequestTaskUpdateCache:{
+            
+            NSTimeInterval cacheTime = [HZ_AVCacheProgress cahceWithAvailableDuration:_player]; // 缓冲时间
+            float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
+//            BOOL isNeedLoading = NO;
+            if (currentAndCacheTimeRate <= 0) {
+                // 播放超过缓存
+                currentAndCacheTimeRate = 0;
+            }else if(currentAndCacheTimeRate > 0){
+                
+                //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
+                //        currentAndCacheTimeRate = cacheTime/self.durationLength;
+                NSInteger loadingTimeLength = self.durationLength * 0.05;
+                loadingTimeLength = _currentPlayTime + loadingTimeLength;
+                
+                if (cacheTime >= self.durationLength) {
+                    //加载完所有
+//                    isNeedLoading = NO;
+//                    NSLog(@"加载完成 - 1");
+                    [self playerStatusLoadFinish];
+                }else if(loadingTimeLength <= cacheTime){
+                    
+//                    isNeedLoading = NO;
+//                    NSLog(@"加载完成 - 2");
+                    [self playerStatusLoadFinish];
+                }else{
+                    
+//                    isNeedLoading = YES;
+//                    NSLog(@"正在加载 - 3");
+                    [self playerStatusStartLoading];
+                }
+            }
+            
+        }
+            break;
+        case HZ_RequestTaskFinishLoadingCache:{
+            
+//            NSLog(@"加载完成 - 4");
+            [self playerStatusLoadFinish];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - HZ_AVPlayerItemObserverDelegate
@@ -513,16 +528,8 @@
             break;
         case HZ_AVPlayerOberverLikelyToKeepUp:{
             
-            BOOL isKeepup = _playerItem.playbackLikelyToKeepUp;
-            if (isKeepup == NO) {
-                if ( [_videoLoader netWorkError]) {
-                    _error = [NSError errorWithDomain:NSURLErrorDomain code:121 userInfo:@{NSLocalizedDescriptionKey:@"Error netWork Error"}];
-                    [_playerItem.asset cancelLoading];
-                    [self playerStatusOccureError];
-                } else {
-                    [self playerStatusStartLoading];
-                }
-            }
+            [self playerStatusLoadFinish];
+
         }
             break;
         case HZ_AVPlayerOberverBufferEmpty:{
@@ -561,23 +568,12 @@
 }
 
 - (void)dealloc {
+    
     [self removeObserveAndNOtification];
-//    [_player removeTimeObserver:_playTimeObserver]; // 移除playTimeObserver
 }
 
 - (void)removeObserveAndNOtification {
-//    if (_isObserver == YES) {
-//        _isObserver = NO;
-////        [_playerItem removeObserver:self forKeyPath:@"status"];
-////        [_playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
-////        [_playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
-////        [_playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
-//        [_player replaceCurrentItemWithPlayerItem:nil];
-//
-//        [_player removeTimeObserver:_playTimeObserver];
-//        _playTimeObserver = nil;
-//        [[NSNotificationCenter defaultCenter] removeObserver:self];
-//    }
+
     if (_playTimeObserver == nil) {
         return;
     }
@@ -624,14 +620,6 @@
     self.player.muted = _isMute;
 }
 
-//-(AVPlayer *)player{
-//
-//    if (_player == nil) {
-//        _player = [[AVPlayer alloc] init];
-//    }
-//    return _player;
-//
-//}
 
 
 -(dispatch_queue_t)playeQueue{
@@ -665,7 +653,12 @@
 -(BOOL)isPlay{
     
     if([[UIDevice currentDevice] systemVersion].intValue>=10){
-        return self.player.timeControlStatus == AVPlayerTimeControlStatusPlaying;
+        if (@available(iOS 10.0, *)) {
+            return self.player.timeControlStatus == AVPlayerTimeControlStatusPlaying;
+        } else {
+            // Fallback on earlier versions
+            return _isPlay;
+        }
     }else{
         return _isPlay;
     }

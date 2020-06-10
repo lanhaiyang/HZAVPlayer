@@ -57,12 +57,13 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 
 
 /**
- 当播放时间与缓存时间比
+ 是否需要显示加载
 
- rate : 0 为还没有加载完成
- @param rate 比例
+ isLoading : 是否需要显示加载
  */
--(void)playerCurrentTimeAndCacheTimeRate:(CGFloat)rate;
+-(void)playerCurrentTimeIsNeedLoading:(BOOL)isLoading;
+
+
 
 @optional;
 
