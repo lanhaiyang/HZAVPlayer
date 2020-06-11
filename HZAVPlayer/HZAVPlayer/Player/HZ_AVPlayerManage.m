@@ -283,43 +283,75 @@
         [self.delegate playerWithCahceDuration:cacheTimeRate];
     }
     
-    float currentRate=self.currentPlayTime/[HZ_AVCacheProgress getPlayerWithLength:_playerItem];
+//    float currentRate=self.currentPlayTime/[HZ_AVCacheProgress getPlayerWithLength:_playerItem];
+//
+//    if (currentRate < 0) {
+//        currentRate = 0;
+//    }
+//
+//    float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
+//    BOOL isNeedLoading = NO;
+//    if (currentAndCacheTimeRate <= 0) {
+//        // 播放超过缓存
+//        currentAndCacheTimeRate = 0;
+//    }else if(currentAndCacheTimeRate > 0){
+//
+////        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
+////        currentAndCacheTimeRate = cacheTime/self.durationLength;
+//        NSInteger loadingTimeLength = self.durationLength * 0.05;
+//        loadingTimeLength = _currentPlayTime + loadingTimeLength;
+//
+//        if (cacheTime >= self.durationLength) {
+//            //加载完所有
+////            currentAndCacheTimeRate = 1;
+//            isNeedLoading = NO;
+//        }else if(loadingTimeLength <= cacheTime){
+//
+//            isNeedLoading = NO;
+//        }else{
+//
+//            isNeedLoading = YES;
+//        }
+//    }
     
-    if (currentRate < 0) {
-        currentRate = 0;
+    
+    if ([self.delegate respondsToSelector:@selector(playerCurrentTimeIsNeedLoading:)]) {
+        
+        BOOL isNeedLoading = [self judgeCurrentPlayerIsCache];
+        [self.delegate playerCurrentTimeIsNeedLoading:isNeedLoading];
     }
     
+}
+
+/// 当前播放是否需要加载
+-(BOOL)judgeCurrentPlayerIsCache{
+    
+    
+    NSTimeInterval cacheTime = [HZ_AVCacheProgress cahceWithAvailableDuration:_player]; // 缓冲时间
     float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
-    BOOL isNeedLoading = NO;
+    //            BOOL isNeedLoading = NO;
     if (currentAndCacheTimeRate <= 0) {
         // 播放超过缓存
         currentAndCacheTimeRate = 0;
     }else if(currentAndCacheTimeRate > 0){
         
-//        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
-//        currentAndCacheTimeRate = cacheTime/self.durationLength;
-        NSInteger loadingTimeLength = self.durationLength * 0.05;
+        //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
+        //        currentAndCacheTimeRate = cacheTime/self.durationLength;
+        NSInteger loadingTimeLength = self.durationLength * 0.1;
         loadingTimeLength = _currentPlayTime + loadingTimeLength;
         
         if (cacheTime >= self.durationLength) {
-            //加载完所有
-//            currentAndCacheTimeRate = 1;
-            isNeedLoading = NO;
+            //加载完成
+            return NO;
         }else if(loadingTimeLength <= cacheTime){
             
-            isNeedLoading = NO;
+            return NO;
         }else{
             
-            isNeedLoading = YES;
+            return YES;
         }
     }
-    
-    
-    if ([self.delegate respondsToSelector:@selector(playerCurrentTimeIsNeedLoading:)]) {
-        
-        [self.delegate playerCurrentTimeIsNeedLoading:isNeedLoading];
-    }
-    
+    return NO;
 }
 
 -(void)setMaxDuration{
@@ -451,35 +483,42 @@
             break;
         case HZ_RequestTaskUpdateCache:{
             
-            NSTimeInterval cacheTime = [HZ_AVCacheProgress cahceWithAvailableDuration:_player]; // 缓冲时间
-            float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
-//            BOOL isNeedLoading = NO;
-            if (currentAndCacheTimeRate <= 0) {
-                // 播放超过缓存
-                currentAndCacheTimeRate = 0;
-            }else if(currentAndCacheTimeRate > 0){
-                
-                //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
-                //        currentAndCacheTimeRate = cacheTime/self.durationLength;
-                NSInteger loadingTimeLength = self.durationLength * 0.05;
-                loadingTimeLength = _currentPlayTime + loadingTimeLength;
-                
-                if (cacheTime >= self.durationLength) {
-                    //加载完所有
-//                    isNeedLoading = NO;
-//                    NSLog(@"加载完成 - 1");
-                    [self playerStatusLoadFinish];
-                }else if(loadingTimeLength <= cacheTime){
-                    
-//                    isNeedLoading = NO;
-//                    NSLog(@"加载完成 - 2");
-                    [self playerStatusLoadFinish];
-                }else{
-                    
-//                    isNeedLoading = YES;
-//                    NSLog(@"正在加载 - 3");
-                    [self playerStatusStartLoading];
-                }
+//            NSTimeInterval cacheTime = [HZ_AVCacheProgress cahceWithAvailableDuration:_player]; // 缓冲时间
+//            float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
+////            BOOL isNeedLoading = NO;
+//            if (currentAndCacheTimeRate <= 0) {
+//                // 播放超过缓存
+//                currentAndCacheTimeRate = 0;
+//            }else if(currentAndCacheTimeRate > 0){
+//
+//                //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
+//                //        currentAndCacheTimeRate = cacheTime/self.durationLength;
+//                NSInteger loadingTimeLength = self.durationLength * 0.05;
+//                loadingTimeLength = _currentPlayTime + loadingTimeLength;
+//
+//                if (cacheTime >= self.durationLength) {
+//                    //加载完所有
+////                    isNeedLoading = NO;
+////                    NSLog(@"加载完成 - 1");
+//                    [self playerStatusLoadFinish];
+//                }else if(loadingTimeLength <= cacheTime){
+//
+////                    isNeedLoading = NO;
+////                    NSLog(@"加载完成 - 2");
+//                    [self playerStatusLoadFinish];
+//                }else{
+//
+////                    isNeedLoading = YES;
+////                    NSLog(@"正在加载 - 3");
+//                    [self playerStatusStartLoading];
+//                }
+//            }
+//
+            BOOL isNeedLoading = [self judgeCurrentPlayerIsCache];
+            if (isNeedLoading == YES) {
+                [self playerStatusStartLoading];
+            }else{
+                [self playerStatusLoadFinish];
             }
             
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -226,16 +226,16 @@
 		65DA06E32490E94600D32DDB /* HZAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */,
-				65DA06E52490E94600D32DDB /* Rotate */,
 				65DA06E82490E94600D32DDB /* Cache */,
-				65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */,
-				65DA07012490E94600D32DDB /* Logic */,
 				65DA07082490E94600D32DDB /* HZ_AVPlayer.h */,
-				65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */,
-				65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */,
 				65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */,
+				65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */,
+				65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */,
+				65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */,
+				65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */,
+				65DA07012490E94600D32DDB /* Logic */,
 				65DA070C2490E94600D32DDB /* Player */,
+				65DA06E52490E94600D32DDB /* Rotate */,
 			);
 			path = HZAVPlayer;
 			sourceTree = "<group>";
@@ -521,16 +521,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/HZAVPlayer/HZAVPlayerBundles.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HZAVPlayerBundles.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
