@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HZ_RequestTaskModel : NSObject
 
+
 @property(nonatomic,strong) NSURL *requestURL;
-@property(nonatomic,strong) NSData *requestData;// 
+@property(nonatomic,strong) NSData *requestData;
 
 @end
 

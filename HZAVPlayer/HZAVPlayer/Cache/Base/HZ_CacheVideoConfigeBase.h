@@ -10,9 +10,9 @@
 
 
 typedef enum : NSUInteger {
-    HZ_RequestTaskSuccess,
-    HZ_RequestTaskFailse,
-    HZ_RequestTaskLoading,
+    HZ_RequestTaskSuccess,// 任务请求成功
+    HZ_RequestTaskFailse,// 任务请求失败
+    HZ_RequestTaskLoading,// 任务正在加载
     HZ_RequestTaskUpdateCache,// 缓存发生更新
-    HZ_RequestTaskFinishLoadingCache
+    HZ_RequestTaskFinishLoadingCache// 下载完成，缓存data
 } HZ_RequestTaskState;

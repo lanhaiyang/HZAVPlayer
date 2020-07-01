@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		135B466AE646A42079DA84A8 /* libPods-HZAVPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */; };
-		2540F56E5C031E701F4C4D09 /* libPods-HZAVPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */; };
+		6565A0CE24AC1D2A000C8026 /* HP_LineRotateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */; };
 		658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2BF226EEDCE00A7D246 /* AppDelegate.m */; };
 		658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2C2226EEDCE00A7D246 /* ViewController.m */; };
 		658DA2C6226EEDCE00A7D246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C4226EEDCE00A7D246 /* Main.storyboard */; };
@@ -38,7 +37,6 @@
 		65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */; };
 		65DA07282490E94600D32DDB /* HZ_Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07112490E94600D32DDB /* HZ_Encryption.m */; };
 		65DA07292490E94600D32DDB /* HZ_AVPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */; };
-		F481BB709FEBDC1C5937B431 /* libPods-HZAVPlayerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,13 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerUITests.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerUITests/Pods-HZAVPlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerTests.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerTests/Pods-HZAVPlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerTests/Pods-HZAVPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
-		2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
-		3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayerUITests.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayerUITests/Pods-HZAVPlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HP_LineRotateAnimation.m; sourceTree = "<group>"; };
+		6565A0CD24AC1D2A000C8026 /* HP_LineRotateAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HP_LineRotateAnimation.h; sourceTree = "<group>"; };
 		658DA2BB226EEDCE00A7D246 /* HZAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658DA2BE226EEDCE00A7D246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		658DA2BF226EEDCE00A7D246 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,8 +117,6 @@
 		65DA07122490E94600D32DDB /* HZ_AVPlayerManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerManage.h; sourceTree = "<group>"; };
 		65DA07132490E94600D32DDB /* HZ_AVCacheProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVCacheProgress.h; sourceTree = "<group>"; };
 		65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerItem.m; sourceTree = "<group>"; };
-		80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
-		BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				135B466AE646A42079DA84A8 /* libPods-HZAVPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +131,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2540F56E5C031E701F4C4D09 /* libPods-HZAVPlayerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,21 +138,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F481BB709FEBDC1C5937B431 /* libPods-HZAVPlayerUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A852177520D52BB0B91B36C /* Frameworks */ = {
+		6565A0CB24AC1D2A000C8026 /* HPLoadeAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				256BCEEBF059687C7AF66323 /* libPods-HZAVPlayer.a */,
-				BB7DBDD5646C68832D9FB987 /* libPods-HZAVPlayerTests.a */,
-				1A68202FA5C5FCB35B85648A /* libPods-HZAVPlayerUITests.a */,
+				6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */,
+				6565A0CD24AC1D2A000C8026 /* HP_LineRotateAnimation.h */,
 			);
-			name = Frameworks;
+			path = HPLoadeAnimation;
 			sourceTree = "<group>";
 		};
 		658DA2B2226EEDCE00A7D246 = {
@@ -174,7 +161,6 @@
 				658DA2E1226EEDD000A7D246 /* HZAVPlayerUITests */,
 				658DA2BC226EEDCE00A7D246 /* Products */,
 				F517398FA4C232FC3245D19C /* Pods */,
-				0A852177520D52BB0B91B36C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +212,7 @@
 		65DA06E32490E94600D32DDB /* HZAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				6565A0CB24AC1D2A000C8026 /* HPLoadeAnimation */,
 				65DA06E82490E94600D32DDB /* Cache */,
 				65DA07082490E94600D32DDB /* HZ_AVPlayer.h */,
 				65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */,
@@ -252,15 +239,15 @@
 		65DA06E82490E94600D32DDB /* Cache */ = {
 			isa = PBXGroup;
 			children = (
-				65DA06E92490E94600D32DDB /* ViewModel */,
-				65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */,
+				65DA06FD2490E94600D32DDB /* Base */,
 				65DA06F52490E94600D32DDB /* HZ_CacheFileManage.h */,
+				65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */,
+				65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */,
+				65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */,
+				65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */,
 				65DA06F62490E94600D32DDB /* HZ_RequestTask.m */,
 				65DA06F72490E94600D32DDB /* Model */,
-				65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */,
-				65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */,
-				65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */,
-				65DA06FD2490E94600D32DDB /* Base */,
+				65DA06E92490E94600D32DDB /* ViewModel */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -268,15 +255,15 @@
 		65DA06E92490E94600D32DDB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				65DA06EA2490E94600D32DDB /* HPCache.m */,
-				65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */,
-				65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */,
-				65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */,
-				65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */,
 				65DA06EF2490E94600D32DDB /* HPCache.h */,
+				65DA06EA2490E94600D32DDB /* HPCache.m */,
+				65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */,
+				65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */,
+				65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */,
 				65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */,
 				65DA06F12490E94600D32DDB /* HZ_DealURLTool.h */,
-				65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */,
+				65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */,
+				65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */,
 				65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */,
 			);
 			path = ViewModel;
@@ -331,12 +318,6 @@
 		F517398FA4C232FC3245D19C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */,
-				2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */,
-				1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */,
-				273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */,
-				1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */,
-				3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -348,11 +329,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 658DA2E7226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayer" */;
 			buildPhases = (
-				1823A272920A276B5C3E7418 /* [CP] Check Pods Manifest.lock */,
 				658DA2B7226EEDCE00A7D246 /* Sources */,
 				658DA2B8226EEDCE00A7D246 /* Frameworks */,
 				658DA2B9226EEDCE00A7D246 /* Resources */,
-				9C8086C209DBE663A2EB14CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,7 +346,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 658DA2EA226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerTests" */;
 			buildPhases = (
-				A0A095AA67616154E0339288 /* [CP] Check Pods Manifest.lock */,
 				658DA2CF226EEDD000A7D246 /* Sources */,
 				658DA2D0226EEDD000A7D246 /* Frameworks */,
 				658DA2D1226EEDD000A7D246 /* Resources */,
@@ -386,7 +364,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 658DA2ED226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayerUITests" */;
 			buildPhases = (
-				3C7EBF50BC7B6A8CCE005ADB /* [CP] Check Pods Manifest.lock */,
 				658DA2DA226EEDD000A7D246 /* Sources */,
 				658DA2DB226EEDD000A7D246 /* Frameworks */,
 				658DA2DC226EEDD000A7D246 /* Resources */,
@@ -470,92 +447,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1823A272920A276B5C3E7418 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3C7EBF50BC7B6A8CCE005ADB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C8086C209DBE663A2EB14CD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0A095AA67616154E0339288 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		658DA2B7226EEDCE00A7D246 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -571,6 +462,7 @@
 				65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */,
 				65DA07192490E94600D32DDB /* HZ_CacheLoadViewModel.m in Sources */,
 				65DA07202490E94600D32DDB /* HZ_CacheVideoConfigeBase.m in Sources */,
+				6565A0CE24AC1D2A000C8026 /* HP_LineRotateAnimation.m in Sources */,
 				65DA071C2490E94600D32DDB /* HZ_CacheLoadManager.m in Sources */,
 				65DA07252490E94600D32DDB /* HZ_AVPlayer.m in Sources */,
 				658DA2CE226EEDD000A7D246 /* main.m in Sources */,
@@ -753,7 +645,6 @@
 		};
 		658DA2E8226EEDD000A7D246 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80FD1235D4539C4B37EA0DE9 /* Pods-HZAVPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -771,7 +662,6 @@
 		};
 		658DA2E9226EEDD000A7D246 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E41753D65EE9208C4F69FFD /* Pods-HZAVPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -789,7 +679,6 @@
 		};
 		658DA2EB226EEDD000A7D246 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BDB0A7C83E13FDDBA900B56 /* Pods-HZAVPlayerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -809,7 +698,6 @@
 		};
 		658DA2EC226EEDD000A7D246 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 273F088D55296D57B2AA7E60 /* Pods-HZAVPlayerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -829,7 +717,6 @@
 		};
 		658DA2EE226EEDD000A7D246 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AB016CC6C623059B77D193B /* Pods-HZAVPlayerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35S4B7K46;
@@ -848,7 +735,6 @@
 		};
 		658DA2EF226EEDD000A7D246 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3271DEACEA0CFB83F06B3D9C /* Pods-HZAVPlayerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35S4B7K46;

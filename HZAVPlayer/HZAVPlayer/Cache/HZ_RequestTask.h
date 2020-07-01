@@ -15,6 +15,7 @@
 
  @optional
 
+/// 下载任务状态
 -(void)requestTaskWithState:(HZ_RequestTaskState)state requestModel:( HZ_RequestTaskModel * _Nullable )taskModel error:(NSError *_Nullable)error;
 
 @end
@@ -27,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 视频格式
 @property(nonatomic,strong,readonly) NSString *contentType;
+/// 视频的类型
 @property(nonatomic,strong,readonly) NSString *type;
 
 @property(nonatomic,assign,readonly) NSUInteger cacheLength;//下载完成的偏移量

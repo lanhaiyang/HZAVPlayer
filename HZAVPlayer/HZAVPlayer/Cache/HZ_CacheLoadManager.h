@@ -14,6 +14,7 @@
 
  @optional
 
+/// 任务下载的状态
 -(void)hz_requestTaskWithState:(HZ_RequestTaskState)state error:(NSError *_Nullable)error;
 
 @end
@@ -23,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HZ_CacheLoadManager : NSObject<AVAssetResourceLoaderDelegate>
 
 
+/// 监听任务下载的状态
 @property(nonatomic,weak) id<HZ_CacheLoadManagerDelegate> delegate;
 
 //@property (nonatomic, assign) BOOL seekRequired;
