@@ -52,14 +52,8 @@ end
 
 ## 介绍
 
-|播放/缓存|cell上播放|修改默认控制模块的样式|横竖屏指定控制模块隐藏|
-|:--:|:--:|:--:|:--:|
-|![Picture](./Resource/5.png)|![Picture](./Resource/6.png)|![Picture](./Resource/7.png)|![Picture](./Resource/10.png)|
-
-## 横屏
-
-<span><div style="text-align: center;">
- <img src="./Resource/9.png" style="transform:rotate(270deg); width="1000" height="626"">
-</div></span>
+|播放/缓存|cell上播放|修改默认控制模块的样式|横竖屏指定控制模块隐藏|横屏|
+|:--:|:--:|:--:|:--:|:--:|
+|![Picture](./Resource/5.png)|![Picture](./Resource/6.png)|![Picture](./Resource/7.png)|![Picture](./Resource/10.png)|![Picture](./Resource/11.png)|
 
 
