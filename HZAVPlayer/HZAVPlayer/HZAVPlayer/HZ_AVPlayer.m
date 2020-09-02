@@ -85,6 +85,7 @@
         [_customHeadeView removeFromSuperview];
         _customHeadeView = nil;
         _customHeadeView = _playerHeaderView;
+        _playerHeaderView.hidden = NO;
     }else{
         [_customHeadeView removeFromSuperview];
         _customHeadeView = nil;
@@ -102,6 +103,7 @@
         [_customBottomView removeFromSuperview];
         _customBottomView = nil;
         _customBottomView = _playerBottomView;
+        _playerBottomView.hidden = NO;
     }
     else{
         [_customBottomView removeFromSuperview];
@@ -130,6 +132,7 @@
         {
             [_customBottomView removeFromSuperview];
             _customBottomView.hidden = YES;
+            _customHeadeView.hidden = NO;
             _customHeadeView.frame = CGRectMake(0, 0, self.rotateView.bounds.size.width, self.headHeight);
             [self.rotateView addSubview:_customHeadeView];
         }
@@ -138,6 +141,7 @@
         {
             [_customHeadeView removeFromSuperview];
             _customHeadeView.hidden = YES;
+            _customBottomView.hidden = NO;
             CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
             _customBottomView.frame = CGRectMake(0, y, self.rotateView.bounds.size.width, self.bottomHeight);
             [self.rotateView.superview addSubview:_customBottomView];
@@ -151,7 +155,8 @@
             
             CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
             _customBottomView.frame = CGRectMake(0, y, self.rotateView.bounds.size.width, self.bottomHeight);
-            
+            _customHeadeView.hidden = NO;
+            _customBottomView.hidden = NO;
             [self.rotateView addSubview:_customHeadeView];
             [self.rotateView addSubview:_customBottomView];
         }

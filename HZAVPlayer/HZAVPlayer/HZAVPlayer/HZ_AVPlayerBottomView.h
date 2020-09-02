@@ -12,14 +12,19 @@
 
 @optional
 
+/// 播放事件
 -(void)playerAction:(BOOL)isSelection;
 
+/// 缩放事件
 -(void)scaleAction;
 
+/// 滑动开始改变
 -(void)slideWithPointWithChange:(CGFloat)progress;
 
+/// 滑动开始点击屏幕
 -(void)slideWithPointWithDown:(CGFloat)progress;
 
+/// 滑动手指离开屏幕
 -(void)slideWithPointWithUp:(CGFloat)progress;
 
 @end

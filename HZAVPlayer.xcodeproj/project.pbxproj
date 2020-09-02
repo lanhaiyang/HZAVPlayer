@@ -12,10 +12,7 @@
 		650C0A5D24FDF360007D223F /* CellPlayerManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A5C24FDF360007D223F /* CellPlayerManage.m */; };
 		650C0A6024FE2EEF007D223F /* ChangeControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */; };
 		650C0A6A24FE351D007D223F /* TVBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A6924FE351D007D223F /* TVBottomView.m */; };
-		650C0A6E24FE3E6F007D223F /* AVPlayerRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */; };
-		650C0A7124FE3E89007D223F /* TestAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A7024FE3E89007D223F /* TestAVPlayer.m */; };
 		657685D324FCF08F0091256C /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657685D224FCF08F0091256C /* NormalViewController.m */; };
-		657685D524FCF37A0091256C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657685D424FCF37A0091256C /* MobileCoreServices.framework */; };
 		658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2BF226EEDCE00A7D246 /* AppDelegate.m */; };
 		658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2C2226EEDCE00A7D246 /* ViewController.m */; };
 		658DA2C6226EEDCE00A7D246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C4226EEDCE00A7D246 /* Main.storyboard */; };
@@ -24,6 +21,11 @@
 		658DA2CE226EEDD000A7D246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2CD226EEDD000A7D246 /* main.m */; };
 		658DA2D8226EEDD000A7D246 /* HZAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */; };
 		658DA2E3226EEDD000A7D246 /* HZAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */; };
+		65CA5A5224FF688F00936F8A /* TVBottomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5124FF688F00936F8A /* TVBottomSlideView.m */; };
+		65CA5A5524FF706F00936F8A /* BackgroundBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5424FF706F00936F8A /* BackgroundBottomView.m */; };
+		65CA5A5824FF77BF00936F8A /* FunctionBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5724FF77BF00936F8A /* FunctionBottomView.m */; };
+		65CA5A5C24FF950B00936F8A /* NSString+HZ_Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5B24FF950B00936F8A /* NSString+HZ_Time.m */; };
+		65CA5A5F24FF992800936F8A /* VHScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5E24FF992800936F8A /* VHScreenViewController.m */; };
 		BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EB97CDD8FD7C9DA7A0C64 /* libPods-HZAVPlayer.a */; };
 /* End PBXBuildFile section */
 
@@ -56,10 +58,6 @@
 		650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeControlViewController.m; sourceTree = "<group>"; };
 		650C0A6824FE351D007D223F /* TVBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVBottomView.h; sourceTree = "<group>"; };
 		650C0A6924FE351D007D223F /* TVBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVBottomView.m; sourceTree = "<group>"; };
-		650C0A6C24FE3E6F007D223F /* AVPlayerRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerRotate.h; sourceTree = "<group>"; };
-		650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerRotate.m; sourceTree = "<group>"; };
-		650C0A6F24FE3E89007D223F /* TestAVPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAVPlayer.h; sourceTree = "<group>"; };
-		650C0A7024FE3E89007D223F /* TestAVPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAVPlayer.m; sourceTree = "<group>"; };
 		657685D124FCF08F0091256C /* NormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
 		657685D224FCF08F0091256C /* NormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
 		657685D424FCF37A0091256C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -79,6 +77,16 @@
 		658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAVPlayerUITests.m; sourceTree = "<group>"; };
 		658DA2E4226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65CA5A5024FF688F00936F8A /* TVBottomSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVBottomSlideView.h; sourceTree = "<group>"; };
+		65CA5A5124FF688F00936F8A /* TVBottomSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVBottomSlideView.m; sourceTree = "<group>"; };
+		65CA5A5324FF706F00936F8A /* BackgroundBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundBottomView.h; sourceTree = "<group>"; };
+		65CA5A5424FF706F00936F8A /* BackgroundBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundBottomView.m; sourceTree = "<group>"; };
+		65CA5A5624FF77BF00936F8A /* FunctionBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionBottomView.h; sourceTree = "<group>"; };
+		65CA5A5724FF77BF00936F8A /* FunctionBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionBottomView.m; sourceTree = "<group>"; };
+		65CA5A5A24FF950B00936F8A /* NSString+HZ_Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HZ_Time.h"; sourceTree = "<group>"; };
+		65CA5A5B24FF950B00936F8A /* NSString+HZ_Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HZ_Time.m"; sourceTree = "<group>"; };
+		65CA5A5D24FF992800936F8A /* VHScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHScreenViewController.h; sourceTree = "<group>"; };
+		65CA5A5E24FF992800936F8A /* VHScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHScreenViewController.m; sourceTree = "<group>"; };
 		8EEED47F8825C343EB3BC895 /* Pods-HZAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		D651FB10660CE13078185C8C /* Pods-HZAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +97,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */,
-				657685D524FCF37A0091256C /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,37 +135,16 @@
 			children = (
 				650C0A5E24FE2EEF007D223F /* ChangeControlViewController.h */,
 				650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */,
+				65CA5A5324FF706F00936F8A /* BackgroundBottomView.h */,
+				65CA5A5424FF706F00936F8A /* BackgroundBottomView.m */,
+				65CA5A5624FF77BF00936F8A /* FunctionBottomView.h */,
+				65CA5A5724FF77BF00936F8A /* FunctionBottomView.m */,
 				650C0A6824FE351D007D223F /* TVBottomView.h */,
 				650C0A6924FE351D007D223F /* TVBottomView.m */,
+				65CA5A5024FF688F00936F8A /* TVBottomSlideView.h */,
+				65CA5A5124FF688F00936F8A /* TVBottomSlideView.m */,
 			);
 			path = ChangeControlViewController;
-			sourceTree = "<group>";
-		};
-		650C0A6B24FE3E45007D223F /* HZFreshAVPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				650C0A7324FE50D2007D223F /* Head */,
-				650C0A7224FE50AA007D223F /* Bottom */,
-				650C0A6C24FE3E6F007D223F /* AVPlayerRotate.h */,
-				650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */,
-				650C0A6F24FE3E89007D223F /* TestAVPlayer.h */,
-				650C0A7024FE3E89007D223F /* TestAVPlayer.m */,
-			);
-			path = HZFreshAVPlayer;
-			sourceTree = "<group>";
-		};
-		650C0A7224FE50AA007D223F /* Bottom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Bottom;
-			sourceTree = "<group>";
-		};
-		650C0A7324FE50D2007D223F /* Head */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Head;
 			sourceTree = "<group>";
 		};
 		658DA2B2226EEDCE00A7D246 = {
@@ -186,7 +172,7 @@
 		658DA2BD226EEDCE00A7D246 /* HZAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				650C0A6B24FE3E45007D223F /* HZFreshAVPlayer */,
+				65CA5A5924FF94FE00936F8A /* Tool */,
 				650C0A6424FE34EA007D223F /* ChangeControlViewController */,
 				650C0A4124FDDC37007D223F /* CellViewShow */,
 				658DA2BE226EEDCE00A7D246 /* AppDelegate.h */,
@@ -195,6 +181,8 @@
 				658DA2C2226EEDCE00A7D246 /* ViewController.m */,
 				657685D124FCF08F0091256C /* NormalViewController.h */,
 				657685D224FCF08F0091256C /* NormalViewController.m */,
+				65CA5A5D24FF992800936F8A /* VHScreenViewController.h */,
+				65CA5A5E24FF992800936F8A /* VHScreenViewController.m */,
 				658DA2C4226EEDCE00A7D246 /* Main.storyboard */,
 				658DA2C7226EEDD000A7D246 /* Assets.xcassets */,
 				658DA2C9226EEDD000A7D246 /* LaunchScreen.storyboard */,
@@ -220,6 +208,15 @@
 				658DA2E4226EEDD000A7D246 /* Info.plist */,
 			);
 			path = HZAVPlayerUITests;
+			sourceTree = "<group>";
+		};
+		65CA5A5924FF94FE00936F8A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				65CA5A5A24FF950B00936F8A /* NSString+HZ_Time.h */,
+				65CA5A5B24FF950B00936F8A /* NSString+HZ_Time.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		9C97BC6F266448E7AF9BA1CF /* Frameworks */ = {
@@ -415,15 +412,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				650C0A6A24FE351D007D223F /* TVBottomView.m in Sources */,
-				650C0A7124FE3E89007D223F /* TestAVPlayer.m in Sources */,
+				65CA5A5224FF688F00936F8A /* TVBottomSlideView.m in Sources */,
+				65CA5A5C24FF950B00936F8A /* NSString+HZ_Time.m in Sources */,
 				658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */,
 				650C0A5A24FDEF27007D223F /* TVTableViewCell.m in Sources */,
+				65CA5A5524FF706F00936F8A /* BackgroundBottomView.m in Sources */,
+				65CA5A5824FF77BF00936F8A /* FunctionBottomView.m in Sources */,
 				658DA2CE226EEDD000A7D246 /* main.m in Sources */,
-				650C0A6E24FE3E6F007D223F /* AVPlayerRotate.m in Sources */,
 				650C0A5D24FDF360007D223F /* CellPlayerManage.m in Sources */,
 				657685D324FCF08F0091256C /* NormalViewController.m in Sources */,
 				650C0A4024FDDC12007D223F /* CellViewShowTVViewController.m in Sources */,
 				650C0A6024FE2EEF007D223F /* ChangeControlViewController.m in Sources */,
+				65CA5A5F24FF992800936F8A /* VHScreenViewController.m in Sources */,
 				658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

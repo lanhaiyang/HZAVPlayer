@@ -9,10 +9,13 @@
 #import "ChangeControlViewController.h"
 #import <HZAVPlayer/HZ_AVPlayer.h>
 #import <Masonry/Masonry.h>
+#import "BackgroundBottomView.h"
+#import "NSString+HZ_Time.h"
 
-@interface ChangeControlViewController()<HPAVPlayerDelegate,HPAVPlayerRotateDelegate>
+@interface ChangeControlViewController()<HPAVPlayerDelegate,HPAVPlayerRotateDelegate,HPAVPlayerBottomViewDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayer *avPlayer;
+@property(nonatomic,strong) BackgroundBottomView *bottomView;
 
 @end
 
@@ -29,6 +32,12 @@
 
 -(void)confige{
     
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"HZAVPlayerBundles" ofType:@"bundle"]];
+    UIImage *stop = [UIImage imageNamed:@"HZPlayer_pause@2x.png" inBundle:bundle compatibleWithTraitCollection:nil];
+    UIImage *player = [UIImage imageNamed:@"HZPlayer_play@2x.png" inBundle:bundle compatibleWithTraitCollection:nil];
+    self.bottomView.bottomView.stopImage = stop;
+    self.bottomView.bottomView.playerImage = player;
+    
     NSString *url = @"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
     [self.avPlayer playerWithUrl:[NSURL URLWithString:url]];
 }
@@ -42,10 +51,85 @@
         make.left.right.bottom.equalTo(self.view);
     }];
     
+    self.avPlayer.bottomHeight = 100;
+    self.avPlayer.headHeight = 0.01;
+    [self.avPlayer updateWithHeadView:[UIView new] bottomView:self.bottomView];//底部控制块修改样式
+    
     //横竖屏在哪个view上显示
     [self.avPlayer showCrosswise:self.avPlayer vertical:self.view];
     
+
 }
+
+#pragma mark - HPAVPlayerBottomViewDelegate
+
+-(void)playerAction:(BOOL)isSelection{
+    
+    if (isSelection == YES) {// 播放 -> 暂停
+        
+        [self.avPlayer pause];
+    }else{
+        
+        [self.avPlayer play];
+    }
+}
+
+-(void)slideWithPointWithChange:(CGFloat)progress{
+    
+    _bottomView.bottomView.changeTime = [NSString convertTime:progress];
+}
+
+-(void)slideWithPointWithDown:(CGFloat)progress{
+    
+    [_avPlayer pause];
+    _bottomView.bottomView.playerState = YES;
+}
+
+-(void)slideWithPointWithUp:(CGFloat)progress{
+    
+    [_avPlayer seeTime:progress];
+    [_avPlayer play];
+    _bottomView.bottomView.playerState = NO;
+}
+
+#pragma mark - HPAVPlayerDelegate
+
+/**
+ 视频播放的范围
+
+ @param minValue 最新的范围 0
+ @param maxValue 最大播放秒数
+ */
+-(void)slideWithMinValue:(CGFloat)minValue maxValue:(CGFloat)maxValue{
+    
+    _bottomView.bottomView.lenghtPlayer = [NSString convertTime:maxValue];
+    [self.bottomView.bottomView slideWithMinValue:minValue maxValue:maxValue];
+}
+
+
+/**
+ 视频播放回调进度
+
+ @param value 播放进度
+ */
+-(void)updateWithSlide:(CGFloat)value{
+    
+    self.bottomView.bottomView.changeTime = [NSString convertTime:value];
+    [self.bottomView.bottomView updateWithSlide:value];
+}
+
+
+/**
+ 缓存进度
+
+ @param progress 缓存进度
+ */
+-(void)updataCacheWithProgress:(CGFloat)progress{
+    
+    [self.bottomView.bottomView updataCacheWithProgress:progress];
+}
+
+
 
 #pragma mark - HPAVPlayerRotateDelegate
 
@@ -109,10 +193,18 @@
         _avPlayer.isCache = YES; // 开启缓存
         
         _avPlayer.fillState = HPAVPlayerResizeAspect;
-        _avPlayer.backgroundColor = [UIColor blackColor];
+        _avPlayer.rotateView.backgroundColor = [UIColor blackColor];
     }
     return _avPlayer;
 }
 
+-(BackgroundBottomView *)bottomView{
+    
+    if (_bottomView == nil) {
+        _bottomView = [[BackgroundBottomView alloc] init];
+        _bottomView.bottomView.delegate = self;
+    }
+    return _bottomView;
+}
 
 @end

@@ -363,7 +363,7 @@
             self.playerLayer = nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self.superView.layer insertSublayer:self.playerLayer atIndex:0];
+                [self.superView.layer addSublayer:self.playerLayer];
             });
             self.player.muted = self.isMute;
             self.url = url;

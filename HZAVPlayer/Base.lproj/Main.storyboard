@@ -88,11 +88,11 @@
                                             <segue destination="0Sl-Na-j51" kind="push" id="dBo-h1-Jf5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oxR-Hy-qww">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="oxR-Hy-qww">
                                         <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oxR-Hy-qww" id="3HV-OW-gNs">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="横竖屏指定控制模块隐藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvZ-Jd-P3n">
@@ -107,6 +107,9 @@
                                                 <constraint firstItem="MvZ-Jd-P3n" firstAttribute="centerY" secondItem="3HV-OW-gNs" secondAttribute="centerY" id="u2z-M8-uL3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ubH-Zh-65h" kind="push" id="1Xj-ZS-XVg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -184,7 +187,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDo-Kz-9Np" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="559"/>
+            <point key="canvasLocation" x="942" y="633"/>
+        </scene>
+        <!--Screen View Controller-->
+        <scene sceneID="JN4-HJ-2ct">
+            <objects>
+                <viewController id="ubH-Zh-65h" customClass="VHScreenViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DJV-Ef-1Yg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ca7-aM-4uh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J3c-Zl-6Tf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKM-9w-bVx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="633"/>
         </scene>
     </scenes>
 </document>

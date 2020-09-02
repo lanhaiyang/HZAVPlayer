@@ -4,7 +4,7 @@
 //
 //  Created by 何鹏 on 2020/9/1.
 //  Copyright © 2020 何鹏. All rights reserved.
-//
+//  
 
 #import <UIKit/UIKit.h>
 #import <HZAVPlayer/HZ_AVPlayerBottomView.h>
@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TVBottomView : UIView
 
-+(instancetype)getPlayerBottomView;
+//+(instancetype)getPlayerBottomView;
 
 @property(nonatomic,weak) id<HPAVPlayerBottomViewDelegate> delegate;
 
@@ -38,8 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UIImage *stopImage;
 @property(nonatomic,strong) UIImage *playerImage;
 
-@property(nonatomic,strong) UIImage *scaleMaxImage;
-@property(nonatomic,strong) UIImage *scaleMinImage;
+//@property(nonatomic,strong) UIImage *scaleMaxImage;
+//@property(nonatomic,strong) UIImage *scaleMinImage;
 
 @end
 
