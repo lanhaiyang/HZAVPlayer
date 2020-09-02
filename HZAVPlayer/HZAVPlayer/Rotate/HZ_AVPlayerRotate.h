@@ -100,6 +100,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerPowersStyle) {
 
 /**
  旋转状态
+ 
  需要 在 rotateWithChangeRect 使用 PT_HPAVPlayer 的
  -(void)playeUpdateWithPlayerLayer:(CGRect)rect;
  

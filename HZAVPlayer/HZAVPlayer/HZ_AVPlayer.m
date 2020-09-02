@@ -85,8 +85,7 @@
         [_customHeadeView removeFromSuperview];
         _customHeadeView = nil;
         _customHeadeView = _playerHeaderView;
-    }
-    else{
+    }else{
         [_customHeadeView removeFromSuperview];
         _customHeadeView = nil;
         [_playerHeaderView removeFromSuperview];
@@ -130,7 +129,7 @@
         case HPAVPlayerOnlyShowHead:
         {
             [_customBottomView removeFromSuperview];
-            _customBottomView = nil;
+            _customBottomView.hidden = YES;
             _customHeadeView.frame = CGRectMake(0, 0, self.rotateView.bounds.size.width, self.headHeight);
             [self.rotateView addSubview:_customHeadeView];
         }
@@ -138,7 +137,7 @@
         case HPAVPlayerOnlyShowBottom:
         {
             [_customHeadeView removeFromSuperview];
-            _customHeadeView = nil;
+            _customHeadeView.hidden = YES;
             CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
             _customBottomView.frame = CGRectMake(0, y, self.rotateView.bounds.size.width, self.bottomHeight);
             [self.rotateView.superview addSubview:_customBottomView];

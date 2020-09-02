@@ -34,7 +34,8 @@
     
     [self addObserver:self forKeyPath:@"playbackBufferEmpty" options:NSKeyValueObservingOptionNew context:nil];
     [self addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil];
-    
+    [self addObserver:self forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:@"presentationSize" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)removeObserveAndNOtification {
@@ -42,15 +43,22 @@
     [self removeObserver:self forKeyPath:@"loadedTimeRanges"];
     [self removeObserver:self forKeyPath:@"playbackBufferEmpty"];
     [self removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
+    [self removeObserver:self forKeyPath:@"duration"];
+    [self removeObserver:self forKeyPath:@"presentationSize"];
 }
 
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     
     if ([keyPath isEqualToString:@"status"]) {
-        AVPlayerStatus status = [[change objectForKey:@"new"] intValue]; // 获取更改后的状态
-
-        if (status == AVPlayerStatusReadyToPlay) {
+        AVPlayerStatus status = [[change objectForKey:NSKeyValueChangeNewKey] intValue]; // 获取更改后的状态
+        
+        if (status == AVPlayerItemStatusUnknown) {
+            
+            if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
+                [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverUnknown];
+            }
+        }else if (status == AVPlayerStatusReadyToPlay) {
             
             if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
                 [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverReadyToPlay];
@@ -70,6 +78,16 @@
 
         }
         
+    }else if ([keyPath isEqualToString:@"duration"]){
+        
+        if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
+            [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverDuration];
+        }
+    }else if ([keyPath isEqualToString:@"presentationSize"]){
+        
+        if ([_hz_observer respondsToSelector:@selector(hz_playerItemObserverWithState:)]) {
+            [_hz_observer hz_playerItemObserverWithState:HZ_AVPlayerOberverPresentationSize];
+        }
     }else if ([keyPath isEqualToString:@"loadedTimeRanges"]) {
 
         

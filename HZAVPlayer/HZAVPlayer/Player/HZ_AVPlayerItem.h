@@ -13,10 +13,13 @@ typedef enum : NSUInteger {
     HZ_AVPlayerOberverReadyToPlay,//加载成功
     HZ_AVPlayerOberverFailed,
     HZ_AVPlayerOberverUnknown,//未知的错误
+    HZ_AVPlayerOberverDuration,
+    HZ_AVPlayerOberverPresentationSize,//获得视频尺寸
     HZ_AVPlayerOberverTimeRanges,//获取时间范围
     HZ_AVPlayerOberverBufferEmpty,//缓存状态
     HZ_AVPlayerOberverLikelyToKeepUp,//加载状态结束
 } HZ_AVPlayerOberverState;
+
 
 @protocol HZ_AVPlayerItemObserverDelegate  <NSObject>
 

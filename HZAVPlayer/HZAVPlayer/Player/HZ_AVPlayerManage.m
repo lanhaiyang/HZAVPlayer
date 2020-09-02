@@ -51,7 +51,7 @@
 }
 
 -(void)confige{
-    
+
     _fillState = HPAVPlayerLayerResizeAspectFill;
 }
 
@@ -283,37 +283,7 @@
         [self.delegate playerWithCahceDuration:cacheTimeRate];
     }
     
-//    float currentRate=self.currentPlayTime/[HZ_AVCacheProgress getPlayerWithLength:_playerItem];
-//
-//    if (currentRate < 0) {
-//        currentRate = 0;
-//    }
-//
-//    float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
-//    BOOL isNeedLoading = NO;
-//    if (currentAndCacheTimeRate <= 0) {
-//        // 播放超过缓存
-//        currentAndCacheTimeRate = 0;
-//    }else if(currentAndCacheTimeRate > 0){
-//
-////        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
-////        currentAndCacheTimeRate = cacheTime/self.durationLength;
-//        NSInteger loadingTimeLength = self.durationLength * 0.05;
-//        loadingTimeLength = _currentPlayTime + loadingTimeLength;
-//
-//        if (cacheTime >= self.durationLength) {
-//            //加载完所有
-////            currentAndCacheTimeRate = 1;
-//            isNeedLoading = NO;
-//        }else if(loadingTimeLength <= cacheTime){
-//
-//            isNeedLoading = NO;
-//        }else{
-//
-//            isNeedLoading = YES;
-//        }
-//    }
-    
+
     
     if ([self.delegate respondsToSelector:@selector(playerCurrentTimeIsNeedLoading:)]) {
         
@@ -393,7 +363,7 @@
             self.playerLayer = nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self.superView.layer addSublayer:self.playerLayer];
+                [self.superView.layer insertSublayer:self.playerLayer atIndex:0];
             });
             self.player.muted = self.isMute;
             self.url = url;
@@ -483,37 +453,7 @@
             break;
         case HZ_RequestTaskUpdateCache:{
             
-//            NSTimeInterval cacheTime = [HZ_AVCacheProgress cahceWithAvailableDuration:_player]; // 缓冲时间
-//            float currentAndCacheTimeRate = cacheTime - self.currentPlayTime;
-////            BOOL isNeedLoading = NO;
-//            if (currentAndCacheTimeRate <= 0) {
-//                // 播放超过缓存
-//                currentAndCacheTimeRate = 0;
-//            }else if(currentAndCacheTimeRate > 0){
-//
-//                //        currentAndCacheTimeRate = self.currentPlayTime/cacheTime;
-//                //        currentAndCacheTimeRate = cacheTime/self.durationLength;
-//                NSInteger loadingTimeLength = self.durationLength * 0.05;
-//                loadingTimeLength = _currentPlayTime + loadingTimeLength;
-//
-//                if (cacheTime >= self.durationLength) {
-//                    //加载完所有
-////                    isNeedLoading = NO;
-////                    NSLog(@"加载完成 - 1");
-//                    [self playerStatusLoadFinish];
-//                }else if(loadingTimeLength <= cacheTime){
-//
-////                    isNeedLoading = NO;
-////                    NSLog(@"加载完成 - 2");
-//                    [self playerStatusLoadFinish];
-//                }else{
-//
-////                    isNeedLoading = YES;
-////                    NSLog(@"正在加载 - 3");
-//                    [self playerStatusStartLoading];
-//                }
-//            }
-//
+
             BOOL isNeedLoading = [self judgeCurrentPlayerIsCache];
             if (isNeedLoading == YES) {
                 [self playerStatusStartLoading];
@@ -548,15 +488,28 @@
         case HZ_AVPlayerOberverFailed:{
             
             _error = _playerItem.error;
-            [self playerStatusOccureError];
+            [self playerStatusStartLoading];
             [self pause];
         }
             break;
         case HZ_AVPlayerOberverUnknown:{
             
-            _error = _playerItem.error;
             [self playerStatusOccureError];
-            [self pause];
+//            [self pause];
+        }
+            break;
+        case HZ_AVPlayerOberverDuration:{
+            
+            if (_state == HPAVPlayerEnd || _state == HPAVPlayerFaile || _isPlay == NO) {
+                
+            }else{
+                _state = HPAVPlayerSuccess;
+            }
+        }
+            break;
+        case HZ_AVPlayerOberverPresentationSize:{
+            
+            _vidoSize = self.playerItem.presentationSize;
         }
             break;
         case HZ_AVPlayerOberverTimeRanges:{

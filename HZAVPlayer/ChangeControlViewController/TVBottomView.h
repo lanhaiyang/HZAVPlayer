@@ -1,30 +1,17 @@
 //
-//  HZ_AVPlayerBottomView.h
-//  HZ_AVPlayer
+//  TVBottomView.h
+//  HZAVPlayer
 //
-//  Created by 何鹏 on 2017/12/8.
-//  Copyright © 2017年 何鹏. All rights reserved.
-//  
+//  Created by 何鹏 on 2020/9/1.
+//  Copyright © 2020 何鹏. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
+#import <HZAVPlayer/HZ_AVPlayerBottomView.h>
 
-@protocol HPAVPlayerBottomViewDelegate <NSObject>
+NS_ASSUME_NONNULL_BEGIN
 
-@optional
-
--(void)playerAction:(BOOL)isSelection;
-
--(void)scaleAction;
-
--(void)slideWithPointWithChange:(CGFloat)progress;
-
--(void)slideWithPointWithDown:(CGFloat)progress;
-
--(void)slideWithPointWithUp:(CGFloat)progress;
-
-@end
-
-@interface HZ_AVPlayerBottomView : UIView
+@interface TVBottomView : UIView
 
 +(instancetype)getPlayerBottomView;
 
@@ -54,6 +41,6 @@
 @property(nonatomic,strong) UIImage *scaleMaxImage;
 @property(nonatomic,strong) UIImage *scaleMinImage;
 
-
-
 @end
+
+NS_ASSUME_NONNULL_END

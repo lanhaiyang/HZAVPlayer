@@ -3,11 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6565A0CE24AC1D2A000C8026 /* HP_LineRotateAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */; };
+		650C0A4024FDDC12007D223F /* CellViewShowTVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A3F24FDDC12007D223F /* CellViewShowTVViewController.m */; };
+		650C0A5A24FDEF27007D223F /* TVTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A5924FDEF27007D223F /* TVTableViewCell.m */; };
+		650C0A5D24FDF360007D223F /* CellPlayerManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A5C24FDF360007D223F /* CellPlayerManage.m */; };
+		650C0A6024FE2EEF007D223F /* ChangeControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */; };
+		650C0A6A24FE351D007D223F /* TVBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A6924FE351D007D223F /* TVBottomView.m */; };
+		650C0A6E24FE3E6F007D223F /* AVPlayerRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */; };
+		650C0A7124FE3E89007D223F /* TestAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 650C0A7024FE3E89007D223F /* TestAVPlayer.m */; };
+		657685D324FCF08F0091256C /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657685D224FCF08F0091256C /* NormalViewController.m */; };
+		657685D524FCF37A0091256C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657685D424FCF37A0091256C /* MobileCoreServices.framework */; };
 		658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2BF226EEDCE00A7D246 /* AppDelegate.m */; };
 		658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2C2226EEDCE00A7D246 /* ViewController.m */; };
 		658DA2C6226EEDCE00A7D246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658DA2C4226EEDCE00A7D246 /* Main.storyboard */; };
@@ -16,27 +24,7 @@
 		658DA2CE226EEDD000A7D246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2CD226EEDD000A7D246 /* main.m */; };
 		658DA2D8226EEDD000A7D246 /* HZAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2D7226EEDD000A7D246 /* HZAVPlayerTests.m */; };
 		658DA2E3226EEDD000A7D246 /* HZAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */; };
-		65DA07152490E94600D32DDB /* HZ_AVPlayerHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */; };
-		65DA07162490E94600D32DDB /* HZ_AVPlayerRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */; };
-		65DA07172490E94600D32DDB /* HPCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06EA2490E94600D32DDB /* HPCache.m */; };
-		65DA07182490E94600D32DDB /* HZ_DealURLTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */; };
-		65DA07192490E94600D32DDB /* HZ_CacheLoadViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */; };
-		65DA071A2490E94600D32DDB /* HZ_CacheFileViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */; };
-		65DA071B2490E94600D32DDB /* HZ_DealVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */; };
-		65DA071C2490E94600D32DDB /* HZ_CacheLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */; };
-		65DA071D2490E94600D32DDB /* HZ_RequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F62490E94600D32DDB /* HZ_RequestTask.m */; };
-		65DA071E2490E94600D32DDB /* HZ_RequestTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */; };
-		65DA071F2490E94600D32DDB /* HZ_CacheFileManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */; };
-		65DA07202490E94600D32DDB /* HZ_CacheVideoConfigeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */; };
-		65DA07212490E94600D32DDB /* HZ_AVPlayerLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */; };
-		65DA07222490E94600D32DDB /* HZ_AVPlayerWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */; };
-		65DA07232490E94600D32DDB /* NSString+HZ_Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07062490E94600D32DDB /* NSString+HZ_Time.m */; };
-		65DA07242490E94600D32DDB /* HZ_AVPlayerBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */; };
-		65DA07252490E94600D32DDB /* HZ_AVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */; };
-		65DA07262490E94600D32DDB /* HZ_AVPlayerManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */; };
-		65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */; };
-		65DA07282490E94600D32DDB /* HZ_Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07112490E94600D32DDB /* HZ_Encryption.m */; };
-		65DA07292490E94600D32DDB /* HZ_AVPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */; };
+		BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EB97CDD8FD7C9DA7A0C64 /* libPods-HZAVPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +45,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HP_LineRotateAnimation.m; sourceTree = "<group>"; };
-		6565A0CD24AC1D2A000C8026 /* HP_LineRotateAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HP_LineRotateAnimation.h; sourceTree = "<group>"; };
+		286EB97CDD8FD7C9DA7A0C64 /* libPods-HZAVPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HZAVPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		650C0A3E24FDDC12007D223F /* CellViewShowTVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellViewShowTVViewController.h; sourceTree = "<group>"; };
+		650C0A3F24FDDC12007D223F /* CellViewShowTVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellViewShowTVViewController.m; sourceTree = "<group>"; };
+		650C0A5824FDEF27007D223F /* TVTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVTableViewCell.h; sourceTree = "<group>"; };
+		650C0A5924FDEF27007D223F /* TVTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVTableViewCell.m; sourceTree = "<group>"; };
+		650C0A5B24FDF360007D223F /* CellPlayerManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellPlayerManage.h; sourceTree = "<group>"; };
+		650C0A5C24FDF360007D223F /* CellPlayerManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellPlayerManage.m; sourceTree = "<group>"; };
+		650C0A5E24FE2EEF007D223F /* ChangeControlViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeControlViewController.h; sourceTree = "<group>"; };
+		650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeControlViewController.m; sourceTree = "<group>"; };
+		650C0A6824FE351D007D223F /* TVBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TVBottomView.h; sourceTree = "<group>"; };
+		650C0A6924FE351D007D223F /* TVBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TVBottomView.m; sourceTree = "<group>"; };
+		650C0A6C24FE3E6F007D223F /* AVPlayerRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerRotate.h; sourceTree = "<group>"; };
+		650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerRotate.m; sourceTree = "<group>"; };
+		650C0A6F24FE3E89007D223F /* TestAVPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAVPlayer.h; sourceTree = "<group>"; };
+		650C0A7024FE3E89007D223F /* TestAVPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAVPlayer.m; sourceTree = "<group>"; };
+		657685D124FCF08F0091256C /* NormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		657685D224FCF08F0091256C /* NormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
+		657685D424FCF37A0091256C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		658DA2BB226EEDCE00A7D246 /* HZAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658DA2BE226EEDCE00A7D246 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		658DA2BF226EEDCE00A7D246 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,48 +79,8 @@
 		658DA2DE226EEDD000A7D246 /* HZAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658DA2E2226EEDD000A7D246 /* HZAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZAVPlayerUITests.m; sourceTree = "<group>"; };
 		658DA2E4226EEDD000A7D246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerHeaderView.m; sourceTree = "<group>"; };
-		65DA06E62490E94600D32DDB /* HZ_AVPlayerRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerRotate.h; sourceTree = "<group>"; };
-		65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerRotate.m; sourceTree = "<group>"; };
-		65DA06EA2490E94600D32DDB /* HPCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCache.m; sourceTree = "<group>"; };
-		65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheLoadViewModel.h; sourceTree = "<group>"; };
-		65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheFileViewModel.h; sourceTree = "<group>"; };
-		65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_DealURLTool.m; sourceTree = "<group>"; };
-		65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_DealVideoTool.h; sourceTree = "<group>"; };
-		65DA06EF2490E94600D32DDB /* HPCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCache.h; sourceTree = "<group>"; };
-		65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheLoadViewModel.m; sourceTree = "<group>"; };
-		65DA06F12490E94600D32DDB /* HZ_DealURLTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_DealURLTool.h; sourceTree = "<group>"; };
-		65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheFileViewModel.m; sourceTree = "<group>"; };
-		65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_DealVideoTool.m; sourceTree = "<group>"; };
-		65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheLoadManager.m; sourceTree = "<group>"; };
-		65DA06F52490E94600D32DDB /* HZ_CacheFileManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheFileManage.h; sourceTree = "<group>"; };
-		65DA06F62490E94600D32DDB /* HZ_RequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_RequestTask.m; sourceTree = "<group>"; };
-		65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_RequestTaskModel.m; sourceTree = "<group>"; };
-		65DA06F92490E94600D32DDB /* HZ_RequestTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_RequestTaskModel.h; sourceTree = "<group>"; };
-		65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheLoadManager.h; sourceTree = "<group>"; };
-		65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheFileManage.m; sourceTree = "<group>"; };
-		65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_RequestTask.h; sourceTree = "<group>"; };
-		65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_CacheVideoConfigeBase.m; sourceTree = "<group>"; };
-		65DA06FF2490E94600D32DDB /* HZ_CacheVideoConfigeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_CacheVideoConfigeBase.h; sourceTree = "<group>"; };
-		65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerBottomView.h; sourceTree = "<group>"; };
-		65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerLogic.m; sourceTree = "<group>"; };
-		65DA07032490E94600D32DDB /* NSString+HZ_Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HZ_Time.h"; sourceTree = "<group>"; };
-		65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerWeb.m; sourceTree = "<group>"; };
-		65DA07052490E94600D32DDB /* HZ_AVPlayerLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerLogic.h; sourceTree = "<group>"; };
-		65DA07062490E94600D32DDB /* NSString+HZ_Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HZ_Time.m"; sourceTree = "<group>"; };
-		65DA07072490E94600D32DDB /* HZ_AVPlayerWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerWeb.h; sourceTree = "<group>"; };
-		65DA07082490E94600D32DDB /* HZ_AVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayer.h; sourceTree = "<group>"; };
-		65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerHeaderView.h; sourceTree = "<group>"; };
-		65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerBottomView.m; sourceTree = "<group>"; };
-		65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayer.m; sourceTree = "<group>"; };
-		65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerManage.m; sourceTree = "<group>"; };
-		65DA070E2490E94600D32DDB /* HZ_Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_Encryption.h; sourceTree = "<group>"; };
-		65DA070F2490E94600D32DDB /* HZ_AVPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerItem.h; sourceTree = "<group>"; };
-		65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVCacheProgress.m; sourceTree = "<group>"; };
-		65DA07112490E94600D32DDB /* HZ_Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_Encryption.m; sourceTree = "<group>"; };
-		65DA07122490E94600D32DDB /* HZ_AVPlayerManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVPlayerManage.h; sourceTree = "<group>"; };
-		65DA07132490E94600D32DDB /* HZ_AVCacheProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZ_AVCacheProgress.h; sourceTree = "<group>"; };
-		65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZ_AVPlayerItem.m; sourceTree = "<group>"; };
+		8EEED47F8825C343EB3BC895 /* Pods-HZAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.release.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		D651FB10660CE13078185C8C /* Pods-HZAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HZAVPlayer.debug.xcconfig"; path = "Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */,
+				657685D524FCF37A0091256C /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,13 +110,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6565A0CB24AC1D2A000C8026 /* HPLoadeAnimation */ = {
+		650C0A4124FDDC37007D223F /* CellViewShow */ = {
 			isa = PBXGroup;
 			children = (
-				6565A0CC24AC1D2A000C8026 /* HP_LineRotateAnimation.m */,
-				6565A0CD24AC1D2A000C8026 /* HP_LineRotateAnimation.h */,
+				650C0A3E24FDDC12007D223F /* CellViewShowTVViewController.h */,
+				650C0A3F24FDDC12007D223F /* CellViewShowTVViewController.m */,
+				650C0A5824FDEF27007D223F /* TVTableViewCell.h */,
+				650C0A5924FDEF27007D223F /* TVTableViewCell.m */,
+				650C0A5B24FDF360007D223F /* CellPlayerManage.h */,
+				650C0A5C24FDF360007D223F /* CellPlayerManage.m */,
 			);
-			path = HPLoadeAnimation;
+			path = CellViewShow;
+			sourceTree = "<group>";
+		};
+		650C0A6424FE34EA007D223F /* ChangeControlViewController */ = {
+			isa = PBXGroup;
+			children = (
+				650C0A5E24FE2EEF007D223F /* ChangeControlViewController.h */,
+				650C0A5F24FE2EEF007D223F /* ChangeControlViewController.m */,
+				650C0A6824FE351D007D223F /* TVBottomView.h */,
+				650C0A6924FE351D007D223F /* TVBottomView.m */,
+			);
+			path = ChangeControlViewController;
+			sourceTree = "<group>";
+		};
+		650C0A6B24FE3E45007D223F /* HZFreshAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				650C0A7324FE50D2007D223F /* Head */,
+				650C0A7224FE50AA007D223F /* Bottom */,
+				650C0A6C24FE3E6F007D223F /* AVPlayerRotate.h */,
+				650C0A6D24FE3E6F007D223F /* AVPlayerRotate.m */,
+				650C0A6F24FE3E89007D223F /* TestAVPlayer.h */,
+				650C0A7024FE3E89007D223F /* TestAVPlayer.m */,
+			);
+			path = HZFreshAVPlayer;
+			sourceTree = "<group>";
+		};
+		650C0A7224FE50AA007D223F /* Bottom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Bottom;
+			sourceTree = "<group>";
+		};
+		650C0A7324FE50D2007D223F /* Head */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Head;
 			sourceTree = "<group>";
 		};
 		658DA2B2226EEDCE00A7D246 = {
@@ -161,6 +169,7 @@
 				658DA2E1226EEDD000A7D246 /* HZAVPlayerUITests */,
 				658DA2BC226EEDCE00A7D246 /* Products */,
 				F517398FA4C232FC3245D19C /* Pods */,
+				9C97BC6F266448E7AF9BA1CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,11 +186,15 @@
 		658DA2BD226EEDCE00A7D246 /* HZAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				65DA06E32490E94600D32DDB /* HZAVPlayer */,
+				650C0A6B24FE3E45007D223F /* HZFreshAVPlayer */,
+				650C0A6424FE34EA007D223F /* ChangeControlViewController */,
+				650C0A4124FDDC37007D223F /* CellViewShow */,
 				658DA2BE226EEDCE00A7D246 /* AppDelegate.h */,
 				658DA2BF226EEDCE00A7D246 /* AppDelegate.m */,
 				658DA2C1226EEDCE00A7D246 /* ViewController.h */,
 				658DA2C2226EEDCE00A7D246 /* ViewController.m */,
+				657685D124FCF08F0091256C /* NormalViewController.h */,
+				657685D224FCF08F0091256C /* NormalViewController.m */,
 				658DA2C4226EEDCE00A7D246 /* Main.storyboard */,
 				658DA2C7226EEDD000A7D246 /* Assets.xcassets */,
 				658DA2C9226EEDD000A7D246 /* LaunchScreen.storyboard */,
@@ -209,115 +222,20 @@
 			path = HZAVPlayerUITests;
 			sourceTree = "<group>";
 		};
-		65DA06E32490E94600D32DDB /* HZAVPlayer */ = {
+		9C97BC6F266448E7AF9BA1CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6565A0CB24AC1D2A000C8026 /* HPLoadeAnimation */,
-				65DA06E82490E94600D32DDB /* Cache */,
-				65DA07082490E94600D32DDB /* HZ_AVPlayer.h */,
-				65DA070B2490E94600D32DDB /* HZ_AVPlayer.m */,
-				65DA07002490E94600D32DDB /* HZ_AVPlayerBottomView.h */,
-				65DA070A2490E94600D32DDB /* HZ_AVPlayerBottomView.m */,
-				65DA07092490E94600D32DDB /* HZ_AVPlayerHeaderView.h */,
-				65DA06E42490E94600D32DDB /* HZ_AVPlayerHeaderView.m */,
-				65DA07012490E94600D32DDB /* Logic */,
-				65DA070C2490E94600D32DDB /* Player */,
-				65DA06E52490E94600D32DDB /* Rotate */,
+				657685D424FCF37A0091256C /* MobileCoreServices.framework */,
+				286EB97CDD8FD7C9DA7A0C64 /* libPods-HZAVPlayer.a */,
 			);
-			path = HZAVPlayer;
-			sourceTree = "<group>";
-		};
-		65DA06E52490E94600D32DDB /* Rotate */ = {
-			isa = PBXGroup;
-			children = (
-				65DA06E62490E94600D32DDB /* HZ_AVPlayerRotate.h */,
-				65DA06E72490E94600D32DDB /* HZ_AVPlayerRotate.m */,
-			);
-			path = Rotate;
-			sourceTree = "<group>";
-		};
-		65DA06E82490E94600D32DDB /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				65DA06FD2490E94600D32DDB /* Base */,
-				65DA06F52490E94600D32DDB /* HZ_CacheFileManage.h */,
-				65DA06FB2490E94600D32DDB /* HZ_CacheFileManage.m */,
-				65DA06FA2490E94600D32DDB /* HZ_CacheLoadManager.h */,
-				65DA06F42490E94600D32DDB /* HZ_CacheLoadManager.m */,
-				65DA06FC2490E94600D32DDB /* HZ_RequestTask.h */,
-				65DA06F62490E94600D32DDB /* HZ_RequestTask.m */,
-				65DA06F72490E94600D32DDB /* Model */,
-				65DA06E92490E94600D32DDB /* ViewModel */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
-		65DA06E92490E94600D32DDB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				65DA06EF2490E94600D32DDB /* HPCache.h */,
-				65DA06EA2490E94600D32DDB /* HPCache.m */,
-				65DA06EC2490E94600D32DDB /* HZ_CacheFileViewModel.h */,
-				65DA06F22490E94600D32DDB /* HZ_CacheFileViewModel.m */,
-				65DA06EB2490E94600D32DDB /* HZ_CacheLoadViewModel.h */,
-				65DA06F02490E94600D32DDB /* HZ_CacheLoadViewModel.m */,
-				65DA06F12490E94600D32DDB /* HZ_DealURLTool.h */,
-				65DA06ED2490E94600D32DDB /* HZ_DealURLTool.m */,
-				65DA06EE2490E94600D32DDB /* HZ_DealVideoTool.h */,
-				65DA06F32490E94600D32DDB /* HZ_DealVideoTool.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		65DA06F72490E94600D32DDB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				65DA06F82490E94600D32DDB /* HZ_RequestTaskModel.m */,
-				65DA06F92490E94600D32DDB /* HZ_RequestTaskModel.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		65DA06FD2490E94600D32DDB /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				65DA06FE2490E94600D32DDB /* HZ_CacheVideoConfigeBase.m */,
-				65DA06FF2490E94600D32DDB /* HZ_CacheVideoConfigeBase.h */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		65DA07012490E94600D32DDB /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				65DA07022490E94600D32DDB /* HZ_AVPlayerLogic.m */,
-				65DA07032490E94600D32DDB /* NSString+HZ_Time.h */,
-				65DA07042490E94600D32DDB /* HZ_AVPlayerWeb.m */,
-				65DA07052490E94600D32DDB /* HZ_AVPlayerLogic.h */,
-				65DA07062490E94600D32DDB /* NSString+HZ_Time.m */,
-				65DA07072490E94600D32DDB /* HZ_AVPlayerWeb.h */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		65DA070C2490E94600D32DDB /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				65DA070D2490E94600D32DDB /* HZ_AVPlayerManage.m */,
-				65DA070E2490E94600D32DDB /* HZ_Encryption.h */,
-				65DA070F2490E94600D32DDB /* HZ_AVPlayerItem.h */,
-				65DA07102490E94600D32DDB /* HZ_AVCacheProgress.m */,
-				65DA07112490E94600D32DDB /* HZ_Encryption.m */,
-				65DA07122490E94600D32DDB /* HZ_AVPlayerManage.h */,
-				65DA07132490E94600D32DDB /* HZ_AVCacheProgress.h */,
-				65DA07142490E94600D32DDB /* HZ_AVPlayerItem.m */,
-			);
-			path = Player;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F517398FA4C232FC3245D19C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				D651FB10660CE13078185C8C /* Pods-HZAVPlayer.debug.xcconfig */,
+				8EEED47F8825C343EB3BC895 /* Pods-HZAVPlayer.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -329,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 658DA2E7226EEDD000A7D246 /* Build configuration list for PBXNativeTarget "HZAVPlayer" */;
 			buildPhases = (
+				A70FC4C84A327F7E8179E3EE /* [CP] Check Pods Manifest.lock */,
 				658DA2B7226EEDCE00A7D246 /* Sources */,
 				658DA2B8226EEDCE00A7D246 /* Frameworks */,
 				658DA2B9226EEDCE00A7D246 /* Resources */,
+				CDA9ED069F01BD80BBE11D4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,36 +367,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A70FC4C84A327F7E8179E3EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HZAVPlayer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDA9ED069F01BD80BBE11D4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HZAVPlayer/Pods-HZAVPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		658DA2B7226EEDCE00A7D246 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DA07292490E94600D32DDB /* HZ_AVPlayerItem.m in Sources */,
-				65DA07212490E94600D32DDB /* HZ_AVPlayerLogic.m in Sources */,
-				65DA071A2490E94600D32DDB /* HZ_CacheFileViewModel.m in Sources */,
-				65DA071B2490E94600D32DDB /* HZ_DealVideoTool.m in Sources */,
-				65DA07172490E94600D32DDB /* HPCache.m in Sources */,
+				650C0A6A24FE351D007D223F /* TVBottomView.m in Sources */,
+				650C0A7124FE3E89007D223F /* TestAVPlayer.m in Sources */,
 				658DA2C3226EEDCE00A7D246 /* ViewController.m in Sources */,
-				65DA07182490E94600D32DDB /* HZ_DealURLTool.m in Sources */,
-				65DA07272490E94600D32DDB /* HZ_AVCacheProgress.m in Sources */,
-				65DA07192490E94600D32DDB /* HZ_CacheLoadViewModel.m in Sources */,
-				65DA07202490E94600D32DDB /* HZ_CacheVideoConfigeBase.m in Sources */,
-				6565A0CE24AC1D2A000C8026 /* HP_LineRotateAnimation.m in Sources */,
-				65DA071C2490E94600D32DDB /* HZ_CacheLoadManager.m in Sources */,
-				65DA07252490E94600D32DDB /* HZ_AVPlayer.m in Sources */,
+				650C0A5A24FDEF27007D223F /* TVTableViewCell.m in Sources */,
 				658DA2CE226EEDD000A7D246 /* main.m in Sources */,
-				65DA07232490E94600D32DDB /* NSString+HZ_Time.m in Sources */,
-				65DA071D2490E94600D32DDB /* HZ_RequestTask.m in Sources */,
-				65DA07162490E94600D32DDB /* HZ_AVPlayerRotate.m in Sources */,
-				65DA071E2490E94600D32DDB /* HZ_RequestTaskModel.m in Sources */,
+				650C0A6E24FE3E6F007D223F /* AVPlayerRotate.m in Sources */,
+				650C0A5D24FDF360007D223F /* CellPlayerManage.m in Sources */,
+				657685D324FCF08F0091256C /* NormalViewController.m in Sources */,
+				650C0A4024FDDC12007D223F /* CellViewShowTVViewController.m in Sources */,
+				650C0A6024FE2EEF007D223F /* ChangeControlViewController.m in Sources */,
 				658DA2C0226EEDCE00A7D246 /* AppDelegate.m in Sources */,
-				65DA07222490E94600D32DDB /* HZ_AVPlayerWeb.m in Sources */,
-				65DA07152490E94600D32DDB /* HZ_AVPlayerHeaderView.m in Sources */,
-				65DA07262490E94600D32DDB /* HZ_AVPlayerManage.m in Sources */,
-				65DA071F2490E94600D32DDB /* HZ_CacheFileManage.m in Sources */,
-				65DA07282490E94600D32DDB /* HZ_Encryption.m in Sources */,
-				65DA07242490E94600D32DDB /* HZ_AVPlayerBottomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,11 +593,13 @@
 		};
 		658DA2E8226EEDD000A7D246 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D651FB10660CE13078185C8C /* Pods-HZAVPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35S4B7K46;
 				INFOPLIST_FILE = HZAVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,11 +612,13 @@
 		};
 		658DA2E9226EEDD000A7D246 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EEED47F8825C343EB3BC895 /* Pods-HZAVPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P35S4B7K46;
 				INFOPLIST_FILE = HZAVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

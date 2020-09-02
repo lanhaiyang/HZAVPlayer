@@ -102,6 +102,8 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 
 @property(nonatomic,strong,readonly) NSError *error;
 
+@property(nonatomic,assign,readonly) CGSize vidoSize;
+
 /// 当前视频处于那种点击状态
 @property(nonatomic,assign) HPTouchPlayerStyle touchStyle;
 
