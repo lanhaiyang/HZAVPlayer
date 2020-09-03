@@ -6,13 +6,13 @@
 -  找到`HZAVPlayer/HZAVPlayer`文件
 
 <span><div style="text-align: center;">
-![Picture](./Resource/1.png)
+![Picture](https://note.youdao.com/yws/api/personal/file/WEB2caa3ea99edb4d181fb8f5e15d70de9d?method=download&shareKey=c5dd38b624b70bea07dd3dea26d3b4ca)
 </div></span>
 
 - 放在(项目.xcodepro)这个目录
 
 <span><div style="text-align: center;">
-![Picture](./Resource/2.png)
+![Picture](https://note.youdao.com/yws/api/personal/file/WEB4e6a6f077f23626836288c948feaee43?method=download&shareKey=37337a4a3b7ec1ee54c16300d7e2d53b)
 </div></span>
 
 - 修改`Podfile`
@@ -47,7 +47,7 @@ end
 - 然后打开项目后会看到`Pods/Development Pods/`目录项出现一个`HZAVPlayer`项目
 
 <span><div style="text-align: center;">
-![Picture](./Resource/4.png)
+![Picture](https://note.youdao.com/yws/api/personal/file/WEB7ee702c585799feb6f7f7b3823d29bde?method=download&shareKey=ae942343fcb138f220bd45780fe1a745)
 </div></span>
 
 
@@ -55,7 +55,7 @@ end
 
 |播放/缓存|cell上播放|修改默认控制模块的样式|横竖屏指定控制模块隐藏|横屏|
 |:--:|:--:|:--:|:--:|:--:|
-|![Picture](./Resource/5.png)|![Picture](./Resource/6.png)|![Picture](./Resource/7.png)|![Picture](./Resource/10.png)|![Picture](./Resource/11.png)|
+|![Picture](https://note.youdao.com/yws/api/personal/file/WEB6b2e0f96ab0c8c2804ab9244887b0ee2?method=download&shareKey=88f801c87a91feb369c1de4e21f6ed90)|![Picture](https://note.youdao.com/yws/api/personal/file/WEB26bececf1ae24cd9bf6b3e3d48170bdb?method=download&shareKey=1eeba8ff15eeb422db3dd07e4d9ac695)|![Picture](https://note.youdao.com/yws/api/personal/file/WEB181ddc38e3c0d1f0a037bd78e29b007f?method=download&shareKey=4fa7b5f1b0dcec9e3fc9f4d7ac02b337)|![Picture](https://note.youdao.com/yws/api/personal/file/WEBfbd13b036198514fede18e46ba1542b5?method=download&shareKey=91f63b72f74147b10510ab1ca5aa46dc)|![Picture](https://note.youdao.com/yws/api/personal/file/WEBe35d627e1a55c0d7589d3e711d80ff7a?method=download&shareKey=bd1400a805d10ad494ef039d945f38b7)|
 
 
 ## 视频操作Api
