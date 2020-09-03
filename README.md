@@ -64,7 +64,7 @@ end
 
 #### 设置控制模块的样式
 
-```object-c
+```obje-c
 /**
  设置头部和底部
  
@@ -78,7 +78,7 @@ end
 
 #### 设置控制模块的高度
 
-```object-c
+```obje-c
 
 /// 在传入view的时候设置好frame的高度
 @property(nonatomic,assign) CGFloat headHeight;
@@ -90,7 +90,7 @@ end
 
 #### 设置控制模块显示
 
-```object-c
+```obje-c
 
 typedef enum : NSUInteger {
     HPAVPlayerClickHiddenHeadAndBottom,//点击时只隐藏头部和底部
@@ -106,7 +106,7 @@ typedef enum : NSUInteger {
 ```
 
 ### 设置缓存
-```object-c
+```obje-c
 
 /// 在 playerWithUrl 之前使用 才会有效 默认为NO
 @property(nonatomic,assign) BOOL isCache;
@@ -115,7 +115,7 @@ typedef enum : NSUInteger {
 
 ### 播放器操作接口
 
-```object-c
+```obje-c
 /// 是否要播放声音
 @property(nonatomic,assign) BOOL isMute;
 
@@ -169,7 +169,7 @@ typedef enum : NSUInteger {
 
 ### 播放状态监听
 
-```object-c
+```obje-c
 
 ///视频状态发生改变
 @property(nonatomic,weak) id<HPAVPlayerDelegate> playerDelegate;
@@ -178,7 +178,7 @@ typedef enum : NSUInteger {
 
 - 回调api
 
-```object-c
+```obje-c
 @protocol HPAVPlayerDelegate  <NSObject>
 
 @optional
@@ -230,7 +230,7 @@ typedef enum : NSUInteger {
 
 ## 旋转操作Api
 
-```object-c
+```obje-c
 
 
 
@@ -272,7 +272,7 @@ typedef enum : NSUInteger {
 ```
 ### 回调Api
 
-```object-c
+```obje-c
 /**
  旋转状态
  
@@ -286,7 +286,7 @@ typedef enum : NSUInteger {
 @property(nonatomic,weak) id<HPAVPlayerRotateDelegate> delegate;
 ```
 
-```object-c
+```obje-c
 @protocol HPAVPlayerRotateDelegate <NSObject>
 
 
