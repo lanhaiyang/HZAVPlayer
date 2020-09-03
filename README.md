@@ -50,6 +50,13 @@ end
 ![Picture](https://note.youdao.com/yws/api/personal/file/WEB7ee702c585799feb6f7f7b3823d29bde?method=download&shareKey=ae942343fcb138f220bd45780fe1a745)
 </div></span>
 
+- 导入框架
+
+```objective-c
+#import <HZAVPlayer/HZ_AVPlayer.h>
+
+```
+
 
 ## 介绍
 
