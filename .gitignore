@@ -1,4 +1,3 @@
-*.podspec
 Pods/
 *.lock
 *.xcworkspace
