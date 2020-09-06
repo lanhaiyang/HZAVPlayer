@@ -100,15 +100,15 @@ end
 ```objective-c
 
 typedef enum : NSUInteger {
-    HPAVPlayerClickHiddenHeadAndBottom,//点击时只隐藏头部和底部
-    HPAVPlayerClickOnlyHiddenHead,//点击时只隐藏头部
-    HPAVPlayerClickOnlyHiddenBottom,
-    HPAVPlayerOnlyShowHead,//只显示头部
-    HPAVPlayerOnlyShowBottom,
-    HPAVPlayerShowHeadAndBottom//显示头部和底部
-} HPAVPlayerHeadAndBottomState;
+    HZAVPlayerClickHiddenHeadAndBottom,//点击时只隐藏头部和底部
+    HZAVPlayerClickOnlyHiddenHead,//点击时只隐藏头部
+    HZAVPlayerClickOnlyHiddenBottom,
+    HZAVPlayerOnlyShowHead,//只显示头部
+    HZAVPlayerOnlyShowBottom,
+    HZAVPlayerShowHeadAndBottom//显示头部和底部
+} HZAVPlayerHeadAndBottomState;
 
-@property(nonatomic,assign) HPAVPlayerHeadAndBottomState state;
+@property(nonatomic,assign) HZAVPlayerHeadAndBottomState state;
 
 ```
 
@@ -136,7 +136,7 @@ typedef enum : NSUInteger {
 @property(nonatomic,assign,readonly) float fileSize;
 
 /// 填充方式
-@property(nonatomic,assign) HPAVPlayerFillStat fillState;
+@property(nonatomic,assign) HZAVPlayerFillStat fillState;
 
 /**
  跳到指定页面 进度
@@ -179,14 +179,14 @@ typedef enum : NSUInteger {
 ```objective-c
 
 ///视频状态发生改变
-@property(nonatomic,weak) id<HPAVPlayerDelegate> playerDelegate;
+@property(nonatomic,weak) id<HZAVPlayerDelegate> playerDelegate;
 
 ```
 
 - 回调api
 
 ```objective-c
-@protocol HPAVPlayerDelegate  <NSObject>
+@protocol HZAVPlayerDelegate  <NSObject>
 
 @optional
 
@@ -212,7 +212,7 @@ typedef enum : NSUInteger {
 
  @param progress 缓存进度
  */
--(void)updataCacheWithProgress:(CGFloat)progress;
+-(void)updataCacheWitHZrogress:(CGFloat)progress;
 
 /**
  视频加载状态
@@ -220,7 +220,7 @@ typedef enum : NSUInteger {
  @param loadState 加载状态
  @return 是否需要调用控件内部的事件 如:当在加载情况会显示加载控件 如果为NO就不会显示控件
  */
--(BOOL)loadWithState:(HPAVPlayerLoadeState)loadState;
+-(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState;
 
 
 
@@ -283,18 +283,18 @@ typedef enum : NSUInteger {
 /**
  旋转状态
  
- 需要 在 rotateWithChangeRect 使用 PT_HPAVPlayer 的
+ 需要 在 rotateWithChangeRect 使用 PT_HZAVPlayer 的
  -(void)playeUpdateWithPlayerLayer:(CGRect)rect;
  
- 需要 在 tapActionView 使用 PT_HPAVPlayer 的
+ 需要 在 tapActionView 使用 PT_HZAVPlayer 的
  -(void)playeTapActionView;
  
  */
-@property(nonatomic,weak) id<HPAVPlayerRotateDelegate> delegate;
+@property(nonatomic,weak) id<HZAVPlayerRotateDelegate> delegate;
 ```
 
 ```objective-c
-@protocol HPAVPlayerRotateDelegate <NSObject>
+@protocol HZAVPlayerRotateDelegate <NSObject>
 
 
 /**
@@ -303,7 +303,7 @@ typedef enum : NSUInteger {
  @param rect 返回选择的长宽
  @param rotate 旋转的状态
  */
--(void)rotateWithChangeRect:(CGRect)rect rotate:(HPAVPlayerRotateStyle)rotate;
+-(void)rotateWithChangeRect:(CGRect)rect rotate:(HZAVPlayerRotateStyle)rotate;
 
 
 /**
