@@ -202,7 +202,7 @@
     return _slideView;
 }
 
--(void)setDelegate:(id<HPAVPlayerBottomViewDelegate>)delegate{
+-(void)setDelegate:(id<HZAVPlayerBottomViewDelegate>)delegate{
     
     _delegate = delegate;
     self.slideView.delegate = delegate;

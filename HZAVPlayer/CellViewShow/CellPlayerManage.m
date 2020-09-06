@@ -11,11 +11,11 @@
 #import <Masonry/Masonry.h>
 #import <objc/message.h>
 
-@interface CellPlayerManage()<HPAVPlayerDelegate>
+@interface CellPlayerManage()<HZAVPlayerDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayer *avPlayer;
 
-@property(nonatomic,assign) HPAVPlayerHeadAndBottomState state;
+@property(nonatomic,assign) HZAVPlayerHeadAndBottomState state;
 
 
 
@@ -35,7 +35,7 @@
 
 -(void)confige{
     
-    _state = HPAVPlayerOnlyShowBottom;
+    _state = HZAVPlayerOnlyShowBottom;
 }
 
 
@@ -154,13 +154,13 @@
         
         self.avPlayer.cyclePlayer = NO;
         self.avPlayer.bottomHeight = 0;
-        self.avPlayer.state = HPAVPlayerOnlyShowBottom;
+        self.avPlayer.state = HZAVPlayerOnlyShowBottom;
         
     } else {
         //横屏
         self.avPlayer.cyclePlayer = NO;
         self.avPlayer.bottomHeight = 70;
-        self.avPlayer.state = HPAVPlayerClickHiddenHeadAndBottom;
+        self.avPlayer.state = HZAVPlayerClickHiddenHeadAndBottom;
     }
 }
 
@@ -173,22 +173,22 @@
  @param loadState 加载状态
  @return 是否需要调用控件内部的事件 如:当在加载情况会显示加载控件 如果为NO就不会显示控件
  */
--(BOOL)loadWithState:(HPAVPlayerLoadeState)loadState{
+-(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HPPlayerLoadSuccess:{
+        case HZPlayerLoadSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HPPlayerLoadEnd:{
+        case HZPlayerLoadEnd:{
             
             if ([_delegate respondsToSelector:@selector(cellPlayerWithState:indexPath:)]) {
                 [_delegate cellPlayerWithState:HZ_ActionUserStopCellTV indexPath:_playeIndexPath];
             }
         }
             break;
-        case HPPlayerLoadFaile:{
+        case HZPlayerLoadFaile:{
             
             if ([_delegate respondsToSelector:@selector(cellPlayerWithState:indexPath:)]) {
                 [_delegate cellPlayerWithState:HZ_ActionUserStopCellTV indexPath:_playeIndexPath];
@@ -207,7 +207,7 @@
     if (_avPlayer == nil) {
         _avPlayer = [[HZ_AVPlayer alloc] init];
         _avPlayer.playerDelegate = self;
-        _avPlayer.fillState = HPAVPlayerResizeAspect;
+        _avPlayer.fillState = HZAVPlayerResizeAspect;
         _avPlayer.rotateView.backgroundColor = [UIColor blackColor];
     }
     return _avPlayer;

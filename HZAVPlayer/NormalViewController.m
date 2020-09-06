@@ -10,7 +10,7 @@
 #import <HZAVPlayer/HZ_AVPlayer.h>
 #import <Masonry/Masonry.h>
 
-@interface NormalViewController()<HPAVPlayerDelegate,HPAVPlayerRotateDelegate>
+@interface NormalViewController()<HZAVPlayerDelegate,HZAVPlayerRotateDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayer *avPlayer;
 
@@ -54,7 +54,7 @@
  @param rect 返回选择的长宽
  @param rotate 旋转的状态
  */
--(void)rotateWithChangeRect:(CGRect)rect rotate:(HPAVPlayerRotateStyle)rotate{
+-(void)rotateWithChangeRect:(CGRect)rect rotate:(HZAVPlayerRotateStyle)rotate{
     [self.avPlayer playeUpdateWithPlayerLayer:rect];
 }
 
@@ -76,18 +76,18 @@
  @param loadState 加载状态
  @return 是否需要调用控件内部的事件 如:当在加载情况会显示加载控件 如果为NO就不会显示控件
  */
--(BOOL)loadWithState:(HPAVPlayerLoadeState)loadState{
+-(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HPPlayerLoadSuccess:{
+        case HZPlayerLoadSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HPPlayerLoadEnd:{
+        case HZPlayerLoadEnd:{
         }
             break;
-        case HPPlayerLoadFaile:{
+        case HZPlayerLoadFaile:{
             
         }
             break;
@@ -107,7 +107,7 @@
         
         _avPlayer.isCache = YES; // 开启缓存
         
-        _avPlayer.fillState = HPAVPlayerResizeAspect;
+        _avPlayer.fillState = HZAVPlayerResizeAspect;
         _avPlayer.rotateView.backgroundColor = [UIColor blackColor];
     }
     return _avPlayer;

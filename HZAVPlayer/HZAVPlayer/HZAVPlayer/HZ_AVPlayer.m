@@ -14,7 +14,7 @@
 #import "HZ_AVPlayerLogic.h"
 #import "HZ_AVPlayerWeb.h"
 
-@interface HZ_AVPlayer()<HPAVPlayerRotateDelegate,HPAVPlayerDelgate,HPAVPlayerHeaderViewDelegate,HPAVPlayerBottomViewDelegate,HPAVPlayerWebDelegate>
+@interface HZ_AVPlayer()<HZAVPlayerRotateDelegate,HZAVPlayerDelgate,HPAVPlayerHeaderViewDelegate,HZAVPlayerBottomViewDelegate,HPAVPlayerWebDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayerManage *playerManage;
 
@@ -128,7 +128,7 @@
 //    }
     
     switch (_state) {
-        case HPAVPlayerOnlyShowHead:
+        case HZAVPlayerOnlyShowHead:
         {
             [_customBottomView removeFromSuperview];
             _customBottomView.hidden = YES;
@@ -137,7 +137,7 @@
             [self.rotateView addSubview:_customHeadeView];
         }
             break;
-        case HPAVPlayerOnlyShowBottom:
+        case HZAVPlayerOnlyShowBottom:
         {
             [_customHeadeView removeFromSuperview];
             _customHeadeView.hidden = YES;
@@ -147,10 +147,10 @@
             [self.rotateView.superview addSubview:_customBottomView];
         }
             break;
-        case HPAVPlayerShowHeadAndBottom:
-        case HPAVPlayerClickOnlyHiddenHead:
-        case HPAVPlayerClickOnlyHiddenBottom:
-        case HPAVPlayerClickHiddenHeadAndBottom:{
+        case HZAVPlayerShowHeadAndBottom:
+        case HZAVPlayerClickOnlyHiddenHead:
+        case HZAVPlayerClickOnlyHiddenBottom:
+        case HZAVPlayerClickHiddenHeadAndBottom:{
             _customHeadeView.frame = CGRectMake(0, 0, self.rotateView.bounds.size.width, self.headHeight);
             
             CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
@@ -194,7 +194,7 @@
 
 #pragma mark - HPAVPlayerRotateDelegate
 
--(void)rotateWithChangeRect:(CGRect)rect rotate:(HPAVPlayerRotateStyle)rotate{
+-(void)rotateWithChangeRect:(CGRect)rect rotate:(HZAVPlayerRotateStyle)rotate{
     
     [self playeUpdateWithPlayerLayer:rect];
     
@@ -215,7 +215,7 @@
     
     CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
     switch (_state) {
-        case HPAVPlayerClickOnlyHiddenHead:
+        case HZAVPlayerClickOnlyHiddenHead:
         {
             if (_customHeadeView.frame.origin.y == 0) {
                 [self hiddeWithHeaderAndBottom];
@@ -225,7 +225,7 @@
             }
         }
             break;
-        case HPAVPlayerClickOnlyHiddenBottom:
+        case HZAVPlayerClickOnlyHiddenBottom:
         {
             if (_customBottomView.frame.origin.y == y) {
                 [self hiddeWithHeaderAndBottom];
@@ -235,7 +235,7 @@
             }
         }
             break;
-        case HPAVPlayerClickHiddenHeadAndBottom:
+        case HZAVPlayerClickHiddenHeadAndBottom:
         {
             if (_customHeadeView.frame.origin.y == 0) {
                 [self hiddeWithHeaderAndBottom];
@@ -245,7 +245,7 @@
             }
         }
             break;
-        case HPAVPlayerOnlyShowBottom:{
+        case HZAVPlayerOnlyShowBottom:{
             
             if (_customBottomView.frame.origin.y == y) {
                 [self showWithHeaderAndBottom];
@@ -297,7 +297,7 @@
     }
     
     if(duration == 1){
-        [self loadWithState:HPAVPlayerLoadFinish];
+        [self loadWithState:HZAVPlayerLoadFinish];
     }
 }
 
@@ -321,13 +321,13 @@
     
     if (_playerBottomView.playerState == NO && isLoading == NO) {
         //        [_playerManage play];
-        [self loadWithState:HPAVPlayerLoadFinish];
+        [self loadWithState:HZAVPlayerLoadFinish];
     }
     else if(isLoading == NO){
-        [self loadWithState:HPAVPlayerLoadFinish];
+        [self loadWithState:HZAVPlayerLoadFinish];
     }
     else if(isLoading == YES){
-        [self loadWithState:HPAVPlayerLoading];
+        [self loadWithState:HZAVPlayerLoading];
         //        [self pause];
         [self privatePause];
     }
@@ -394,7 +394,7 @@
     [_playerManage slideTouchWithEnd];
 }
 
--(void)loadWithState:(HPAVPlayerLoade)loadState{
+-(void)loadWithState:(HZAVPlayerLoade)loadState{
     
     BOOL state = YES;
     if ([_playerDelegate respondsToSelector:@selector(loadWithState:)]) {
@@ -406,23 +406,23 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (loadState == HPAVPlayerLoading) {
+        if (loadState == HZAVPlayerLoading) {
             
             [self.rotateView.superview addSubview:self.lineLoadAnimation];
             
-        }else if(loadState == HPAVPlayerLoadFinish){
+        }else if(loadState == HZAVPlayerLoadFinish){
             
             if (self.isHandOpenPlaye == YES) {//外部播放
                 [self privatePlay];
             }
             [self.lineLoadAnimation removeFromSuperview];
         }
-        else if(loadState == HPPlayerLoadEnd){
+        else if(loadState == HZPlayerLoadEnd){
             
             self.playerBottomView.playerState = YES;
             [self.lineLoadAnimation removeFromSuperview];
         }
-        else if (loadState == HPAVPlayerFaile){
+        else if (loadState == HZAVPlayerFaile){
             [self.lineLoadAnimation removeFromSuperview];
         }
     });
@@ -474,13 +474,13 @@
 
 #pragma mark - 处理点击事件
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    _playerManage.touchStyle = HPTouchPlayerNone;
+    _playerManage.touchStyle = HZTouchPlayerNone;
 }
 
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if (_playerManage.touchStyle == HPTouchPlayerNone) {
+    if (_playerManage.touchStyle == HZTouchPlayerNone) {
         //可以做横竖屏设置
         
     }
@@ -491,7 +491,7 @@
     CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
     
     switch (_state) {
-        case HPAVPlayerOnlyShowHead:
+        case HZAVPlayerOnlyShowHead:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -500,7 +500,7 @@
                              }];
         }
             break;
-        case HPAVPlayerOnlyShowBottom:
+        case HZAVPlayerOnlyShowBottom:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -509,12 +509,12 @@
                              }];
         }
             break;
-        case HPAVPlayerShowHeadAndBottom:
+        case HZAVPlayerShowHeadAndBottom:
         {
             
         }
             break;
-        case HPAVPlayerClickOnlyHiddenHead:
+        case HZAVPlayerClickOnlyHiddenHead:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -523,7 +523,7 @@
                              }];
         }
             break;
-        case HPAVPlayerClickOnlyHiddenBottom:
+        case HZAVPlayerClickOnlyHiddenBottom:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -532,7 +532,7 @@
                              }];
         }
             break;
-        case HPAVPlayerClickHiddenHeadAndBottom:
+        case HZAVPlayerClickHiddenHeadAndBottom:
         {
             
             [UIView animateWithDuration:0.25
@@ -554,7 +554,7 @@
     CGFloat y = self.rotateView.bounds.size.height - self.bottomHeight;
     
     switch (_state) {
-        case HPAVPlayerOnlyShowHead:
+        case HZAVPlayerOnlyShowHead:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -563,7 +563,7 @@
                              }];
         }
             break;
-        case HPAVPlayerOnlyShowBottom:
+        case HZAVPlayerOnlyShowBottom:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -572,12 +572,12 @@
                              }];
         }
             break;
-        case HPAVPlayerShowHeadAndBottom:
+        case HZAVPlayerShowHeadAndBottom:
         {
             
         }
             break;
-        case HPAVPlayerClickOnlyHiddenHead:
+        case HZAVPlayerClickOnlyHiddenHead:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -586,7 +586,7 @@
                              }];
         }
             break;
-        case HPAVPlayerClickOnlyHiddenBottom:
+        case HZAVPlayerClickOnlyHiddenBottom:
         {
             [UIView animateWithDuration:0.25
                              animations:^{
@@ -595,7 +595,7 @@
                              }];
         }
             break;
-        case HPAVPlayerClickHiddenHeadAndBottom:
+        case HZAVPlayerClickHiddenHeadAndBottom:
         {
             
             [UIView animateWithDuration:0.25
@@ -635,7 +635,7 @@
 #pragma mark - 懒加载
 
 
--(void)setFillState:(HPAVPlayerFillStat)fillState{
+-(void)setFillState:(HZAVPlayerFillStat)fillState{
     
     _fillState = fillState;
     self.playerManage.fillState = (int)fillState;

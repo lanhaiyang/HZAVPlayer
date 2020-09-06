@@ -52,7 +52,7 @@
 
 -(void)confige{
 
-    _fillState = HPAVPlayerLayerResizeAspectFill;
+    _fillState = HZAVPlayerLayerResizeAspectFill;
 }
 
 -(void)updateWithPlayerLayer:(CGRect)rect{
@@ -218,7 +218,7 @@
             return;
         }
 
-        if (StrongSelf.touchStyle != HPTouchPlayerHorizontal) {
+        if (StrongSelf.touchStyle != HZTouchPlayerHorizontal) {
 
             CGFloat endTime = [HZ_AVCacheProgress getPlayerWithLength:StrongSelf.playerItem];
             if (StrongSelf.currentPlayTime >= endTime - 0.2 && endState == NO) {
@@ -258,7 +258,7 @@
     if (_cyclePlayer == NO) {
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
-            [self loadWithState:HPAVPlayerEnd];
+            [self loadWithState:HZAVPlayerEnd];
             [self updateChangePlayeWithTimeSecond:0];
             [weakSelf pause];
         }]; // 跳转到初始
@@ -266,7 +266,7 @@
     else{
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
-            [self loadWithState:HPAVPlayerEnd];
+            [self loadWithState:HZAVPlayerEnd];
             [self updateChangePlayeWithTimeSecond:0];
             [weakSelf play];
         }];
@@ -409,25 +409,25 @@
 
 -(void)playerStatusStartLoading{
     
-    [self loadWithState:HPAVPlayerLoading];
+    [self loadWithState:HZAVPlayerLoading];
 }
 
 -(void)playerStatusOccureError{
     
-    [self loadWithState:HPAVPlayerFaile];
+    [self loadWithState:HZAVPlayerFaile];
 }
 
 -(void)playerStatusSuccess{
     
-    [self loadWithState:HPAVPlayerSuccess];
+    [self loadWithState:HZAVPlayerSuccess];
 }
 
 -(void)playerStatusLoadFinish{
     
-    [self loadWithState:HPAVPlayerLoadFinish];
+    [self loadWithState:HZAVPlayerLoadFinish];
 }
 
--(void)loadWithState:(HPAVPlayerLoade)loadState{
+-(void)loadWithState:(HZAVPlayerLoade)loadState{
     
     if ([self.delegate respondsToSelector:@selector(loadWithState:)]) {
         _state = loadState;
@@ -500,10 +500,10 @@
             break;
         case HZ_AVPlayerOberverDuration:{
             
-            if (_state == HPAVPlayerEnd || _state == HPAVPlayerFaile || _isPlay == NO) {
+            if (_state == HZAVPlayerEnd || _state == HZAVPlayerFaile || _isPlay == NO) {
                 
             }else{
-                _state = HPAVPlayerSuccess;
+                _state = HZAVPlayerSuccess;
             }
         }
             break;
@@ -582,21 +582,21 @@
 
 #pragma mark - 懒加载
 
--(void)setFillState:(HPAVPlayerLayerFillStat)fillState{
+-(void)setFillState:(HZAVPlayerLayerFillStat)fillState{
     
     _fillState = fillState;
     switch (fillState) {
-        case HPAVPlayerLayerResizeAspect:
+        case HZAVPlayerLayerResizeAspect:
         {
             _playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
         }
             break;
-        case HPAVPlayerLayerResizeAspectFill:
+        case HZAVPlayerLayerResizeAspectFill:
         {
             _playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         }
             break;
-        case HPAVPlayerLayerResize:
+        case HZAVPlayerLayerResize:
         {
             _playerLayer.videoGravity = AVLayerVideoGravityResize;
         }

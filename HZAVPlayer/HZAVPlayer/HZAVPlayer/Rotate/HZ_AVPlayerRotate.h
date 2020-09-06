@@ -8,18 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, HPAVPlayerRotateStyle) {
-    HPCrosswise, // 横屏
-    HPvertical, // 竖屏
+typedef NS_ENUM(NSInteger, HZAVPlayerRotateStyle) {
+    HZCrosswise, // 横屏
+    HZvertical, // 竖屏
 };
 
 typedef NS_ENUM(NSInteger, HPAVPlayerPowersStyle) {
-    HPAVShowHeight,//高优先级
-    HPAVShowMiddle,//中优先级
-    HPAVShowLow//低优先级
+    HZAVShowHeight,//高优先级
+    HZAVShowMiddle,//中优先级
+    HZAVShowLow//低优先级
 };
 
-@protocol HPAVPlayerRotateDelegate <NSObject>
+@protocol HZAVPlayerRotateDelegate <NSObject>
 
 
 /**
@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerPowersStyle) {
  @param rect 返回选择的长宽
  @param rotate 旋转的状态
  */
--(void)rotateWithChangeRect:(CGRect)rect rotate:(HPAVPlayerRotateStyle)rotate;
+-(void)rotateWithChangeRect:(CGRect)rect rotate:(HZAVPlayerRotateStyle)rotate;
 
 
 /**
@@ -108,6 +108,6 @@ typedef NS_ENUM(NSInteger, HPAVPlayerPowersStyle) {
  -(void)playeTapActionView;
  
  */
-@property(nonatomic,weak) id<HPAVPlayerRotateDelegate> delegate;
+@property(nonatomic,weak) id<HZAVPlayerRotateDelegate> delegate;
 
 @end

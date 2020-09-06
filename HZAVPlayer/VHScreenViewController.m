@@ -11,7 +11,7 @@
 #import <Masonry/Masonry.h>
 #import <objc/message.h>
 
-@interface VHScreenViewController()<HPAVPlayerDelegate,HPAVPlayerRotateDelegate>
+@interface VHScreenViewController()<HZAVPlayerDelegate,HZAVPlayerRotateDelegate>
 
 @property(nonatomic,strong) HZ_AVPlayer *avPlayer;
 @property(nonatomic,assign) BOOL isRotate;
@@ -60,7 +60,7 @@
     
     //横竖屏在哪个view上显示
     [self.avPlayer showCrosswise:self.avPlayer vertical:self.view];
-    self.avPlayer.state = HPAVPlayerOnlyShowBottom;// 隐藏头部
+    self.avPlayer.state = HZAVPlayerOnlyShowBottom;// 隐藏头部
     [self.avPlayer updateWithHeadView:self.headView  bottomView:nil];
     
 }
@@ -74,14 +74,14 @@
         //竖屏
         
         self.avPlayer.cyclePlayer = NO;
-        self.avPlayer.state = HPAVPlayerOnlyShowBottom;// 隐藏头部
+        self.avPlayer.state = HZAVPlayerOnlyShowBottom;// 隐藏头部
         [self.avPlayer updateWithHeadView:self.headView bottomView:nil];
         
         _isRotate = NO;
     } else {
         //横屏
         self.avPlayer.cyclePlayer = NO;
-        self.avPlayer.state = HPAVPlayerOnlyShowBottom;// 恢复正常
+        self.avPlayer.state = HZAVPlayerOnlyShowBottom;// 恢复正常
         [self.avPlayer updateWithHeadView:self.headView bottomView:nil];
         
         _isRotate = YES;
@@ -147,7 +147,7 @@
  @param rect 返回选择的长宽
  @param rotate 旋转的状态
  */
--(void)rotateWithChangeRect:(CGRect)rect rotate:(HPAVPlayerRotateStyle)rotate{
+-(void)rotateWithChangeRect:(CGRect)rect rotate:(HZAVPlayerRotateStyle)rotate{
     [self.avPlayer playeUpdateWithPlayerLayer:rect];
 }
 
@@ -169,18 +169,18 @@
  @param loadState 加载状态
  @return 是否需要调用控件内部的事件 如:当在加载情况会显示加载控件 如果为NO就不会显示控件
  */
--(BOOL)loadWithState:(HPAVPlayerLoadeState)loadState{
+-(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HPPlayerLoadSuccess:{
+        case HZPlayerLoadSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HPPlayerLoadEnd:{
+        case HZPlayerLoadEnd:{
         }
             break;
-        case HPPlayerLoadFaile:{
+        case HZPlayerLoadFaile:{
             
         }
             break;
@@ -200,7 +200,7 @@
         
         _avPlayer.isCache = YES; // 开启缓存
         
-        _avPlayer.fillState = HPAVPlayerResizeAspect;
+        _avPlayer.fillState = HZAVPlayerResizeAspect;
         _avPlayer.rotateView.backgroundColor = [UIColor blackColor];
     }
     return _avPlayer;

@@ -11,30 +11,30 @@
 #import "HZ_AVPlayerHeaderView.h"
 #import "HZ_AVPlayerBottomView.h"
 
-typedef NS_ENUM(NSInteger, HPAVPlayerLoadeState) {
-    HPPlayerLoading, // 正在加载
-    HPPlayerLoadFinish, // 加载完成
-    HPPlayerLoadEnd, //播放结束
-    HPPlayerLoadFaile,
-    HPPlayerLoadSuccess
+typedef NS_ENUM(NSInteger, HZAVPlayerLoadeState) {
+    HZPlayerLoading, // 正在加载
+    HZPlayerLoadFinish, // 加载完成
+    HZPlayerLoadEnd, //播放结束
+    HZPlayerLoadFaile,
+    HZPlayerLoadSuccess
 };
 
 typedef enum : NSUInteger {
-    HPAVPlayerClickHiddenHeadAndBottom,//点击时只隐藏头部和底部
-    HPAVPlayerClickOnlyHiddenHead,//点击时只隐藏头部
-    HPAVPlayerClickOnlyHiddenBottom,
-    HPAVPlayerOnlyShowHead,//只显示头部
-    HPAVPlayerOnlyShowBottom,
-    HPAVPlayerShowHeadAndBottom//显示头部和底部
-} HPAVPlayerHeadAndBottomState;
+    HZAVPlayerClickHiddenHeadAndBottom,//点击时只隐藏头部和底部
+    HZAVPlayerClickOnlyHiddenHead,//点击时只隐藏头部
+    HZAVPlayerClickOnlyHiddenBottom,
+    HZAVPlayerOnlyShowHead,//只显示头部
+    HZAVPlayerOnlyShowBottom,
+    HZAVPlayerShowHeadAndBottom//显示头部和底部
+} HZAVPlayerHeadAndBottomState;
 
-typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
-    HPAVPlayerResizeAspect, //在当前layer设置的范围内按比例缩放显示完整个视频
-    HPAVPlayerResizeAspectFill,//按view大小填充完layer
-    HPAVPlayerResize //按照view的大小拉伸 填充满layer
+typedef NS_ENUM(NSInteger, HZAVPlayerFillStat) {
+    HZAVPlayerResizeAspect, //在当前layer设置的范围内按比例缩放显示完整个视频
+    HZAVPlayerResizeAspectFill,//按view大小填充完layer
+    HZAVPlayerResize //按照view的大小拉伸 填充满layer
 };
 
-@protocol HPAVPlayerDelegate  <NSObject>
+@protocol HZAVPlayerDelegate  <NSObject>
 
 @optional
 
@@ -68,7 +68,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
  @param loadState 加载状态
  @return 是否需要调用控件内部的事件 如:当在加载情况会显示加载控件 如果为NO就不会显示控件
  */
--(BOOL)loadWithState:(HPAVPlayerLoadeState)loadState;
+-(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState;
 
 
 
@@ -91,7 +91,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
 /// 在传入view的时候设置好frame的高度
 @property(nonatomic,assign) CGFloat bottomHeight;
 
-@property(nonatomic,assign) HPAVPlayerHeadAndBottomState state;
+@property(nonatomic,assign) HZAVPlayerHeadAndBottomState state;
 
 /**
  懂设置自定义是默认 customHeadeView 该 playerHeaderView 无效
@@ -106,7 +106,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
 @property(nonatomic,strong,readonly) HZ_AVPlayerBottomView *playerBottomView;
 
 ///视频状态发生改变
-@property(nonatomic,weak) id<HPAVPlayerDelegate> playerDelegate;
+@property(nonatomic,weak) id<HZAVPlayerDelegate> playerDelegate;
 
 /// 在 playerWithUrl 之前使用 才会有效 默认为NO
 @property(nonatomic,assign) BOOL isCache;
@@ -127,7 +127,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerFillStat) {
 @property(nonatomic,assign,readonly) float fileSize;
 
 /// 填充方式
-@property(nonatomic,assign) HPAVPlayerFillStat fillState;
+@property(nonatomic,assign) HZAVPlayerFillStat fillState;
 
 
 /**

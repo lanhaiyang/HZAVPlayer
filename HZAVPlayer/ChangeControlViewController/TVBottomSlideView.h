@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TVBottomSlideView : UIView
 
 
-@property(nonatomic,weak) id<HPAVPlayerBottomViewDelegate> delegate;
+@property(nonatomic,weak) id<HZAVPlayerBottomViewDelegate> delegate;
 
 @property(nonatomic,strong) UIColor *progressColor;
 @property(nonatomic,strong) UIImage *slideImage;

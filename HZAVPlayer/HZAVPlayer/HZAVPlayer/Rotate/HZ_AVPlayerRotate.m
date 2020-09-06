@@ -75,12 +75,12 @@
     
     if (self.traitCollection.verticalSizeClass != UIUserInterfaceSizeClassCompact) {
         if ([self.delegate respondsToSelector:@selector(rotateWithChangeRect:rotate:)]) {
-            [self.delegate rotateWithChangeRect:self.bounds rotate:HPvertical];
+            [self.delegate rotateWithChangeRect:self.bounds rotate:HZvertical];
         }
         
     }else{
         if ([self.delegate respondsToSelector:@selector(rotateWithChangeRect:rotate:)]) {
-            [self.delegate rotateWithChangeRect:self.verticalView.window.bounds rotate:HPCrosswise];
+            [self.delegate rotateWithChangeRect:self.verticalView.window.bounds rotate:HZCrosswise];
         }
     }
 }

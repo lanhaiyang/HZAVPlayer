@@ -8,27 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, HPAVPlayerLoade) {
-    HPAVPlayerLoading, // 正在加载
-    HPAVPlayerLoadFinish, // 加载完成
-    HPAVPlayerEnd, //播放结束
-    HPAVPlayerFaile,//播放失败
-    HPAVPlayerSuccess,//成功播放
+typedef NS_ENUM(NSInteger, HZAVPlayerLoade) {
+    HZAVPlayerLoading, // 正在加载
+    HZAVPlayerLoadFinish, // 加载完成
+    HZAVPlayerEnd, //播放结束
+    HZAVPlayerFaile,//播放失败
+    HZAVPlayerSuccess,//成功播放
 };
 
-typedef NS_ENUM(NSInteger, HPTouchPlayerStyle) {
-    HPTouchPlayerNone, // 轻触
-    HPTouchPlayerHorizontal, // 水平滑动
-    HPTouchPlayerUnknow, // 未知
+typedef NS_ENUM(NSInteger, HZTouchPlayerStyle) {
+    HZTouchPlayerNone, // 轻触
+    HZTouchPlayerHorizontal, // 水平滑动
+    HZTouchPlayerUnknow, // 未知
 };
 
-typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
-    HPAVPlayerLayerResizeAspect, //在当前layer设置的范围内按比例缩放显示完整个视频
-    HPAVPlayerLayerResizeAspectFill,//按view大小填充完layer
-    HPAVPlayerLayerResize //按照view的大小拉伸 填充满layer
+typedef NS_ENUM(NSInteger, HZAVPlayerLayerFillStat){
+    HZAVPlayerLayerResizeAspect, //在当前layer设置的范围内按比例缩放显示完整个视频
+    HZAVPlayerLayerResizeAspectFill,//按view大小填充完layer
+    HZAVPlayerLayerResize //按照view的大小拉伸 填充满layer
 };
 
-@protocol HPAVPlayerDelgate <NSObject>
+@protocol HZAVPlayerDelgate <NSObject>
 
 @optional
 
@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 
  @param loadState 状态
  */
--(void)loadWithState:(HPAVPlayerLoade)loadState;
+-(void)loadWithState:(HZAVPlayerLoade)loadState;
 
 @end
 
@@ -105,9 +105,9 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 @property(nonatomic,assign,readonly) CGSize vidoSize;
 
 /// 当前视频处于那种点击状态
-@property(nonatomic,assign) HPTouchPlayerStyle touchStyle;
+@property(nonatomic,assign) HZTouchPlayerStyle touchStyle;
 
-@property(nonatomic,assign,readonly) HPAVPlayerLoade state;
+@property(nonatomic,assign,readonly) HZAVPlayerLoade state;
 
 @property(nonatomic,assign,readonly) float currentPlayTime;
 
@@ -115,7 +115,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 @property(nonatomic,assign,readonly) NSTimeInterval durationLength;
 
 /// 操作代理
-@property(nonatomic,weak) id<HPAVPlayerDelgate> delegate;
+@property(nonatomic,weak) id<HZAVPlayerDelgate> delegate;
 
 /// 进入后台代理
 @property(nonatomic,weak) id<HPAVPlayerDataSource> dataSource;
@@ -130,7 +130,7 @@ typedef NS_ENUM(NSInteger, HPAVPlayerLayerFillStat){
 @property(nonatomic,assign) BOOL isCache;
 
 /// 填充方式
-@property(nonatomic,assign) HPAVPlayerLayerFillStat fillState;
+@property(nonatomic,assign) HZAVPlayerLayerFillStat fillState;
 
 /// 是否取消声音的播放
 @property(nonatomic,assign) BOOL isMute;

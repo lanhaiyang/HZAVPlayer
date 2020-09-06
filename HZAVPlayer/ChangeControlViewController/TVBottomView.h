@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //+(instancetype)getPlayerBottomView;
 
-@property(nonatomic,weak) id<HPAVPlayerBottomViewDelegate> delegate;
+@property(nonatomic,weak) id<HZAVPlayerBottomViewDelegate> delegate;
 
 -(void)slideWithMinValue:(CGFloat)minValue maxValue:(CGFloat)maxValue;
 
