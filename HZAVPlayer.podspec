@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "HZAVPlayer"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of HZAVPlayer."
+  spec.summary      = "iOS 视频播放控件HZAVPlayer，支持竖屏模式下全屏播放，cell中播放视频，缓存"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                   HZAVPlayer
+                   iOS 视频播放控件HZAVPlayer，支持竖屏模式下全屏播放，cell中播放视频，缓存
                    DESC
 
   spec.homepage     = "http://EXAMPLE/HZAVPlayer"
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/lanhaiyang/HZAVPlayer.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
