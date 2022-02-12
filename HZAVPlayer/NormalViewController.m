@@ -29,6 +29,9 @@
 -(void)confige{
     
     NSString *url = @"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
+//    NSString *url = @"https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
+//    NSString *url = @"http://127.0.0.1:8000/static/uploads/a7e2bf765f117c81e0bc4e55e49e8b7f/m3u8/video.m3u8";
+//    NSString *url = @"http://vod.uuuqwr.cn/sv/501f4327-17b9bf8b37d/501f4327-17b9bf8b37d.mp4";
     [self.avPlayer playerWithUrl:[NSURL URLWithString:url]];
 }
 

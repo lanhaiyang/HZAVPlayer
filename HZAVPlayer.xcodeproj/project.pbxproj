@@ -26,6 +26,7 @@
 		65CA5A5824FF77BF00936F8A /* FunctionBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5724FF77BF00936F8A /* FunctionBottomView.m */; };
 		65CA5A5C24FF950B00936F8A /* NSString+HZ_Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5B24FF950B00936F8A /* NSString+HZ_Time.m */; };
 		65CA5A5F24FF992800936F8A /* VHScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CA5A5E24FF992800936F8A /* VHScreenViewController.m */; };
+		65D64B232505E0FE00203119 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657685D424FCF37A0091256C /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 286EB97CDD8FD7C9DA7A0C64 /* libPods-HZAVPlayer.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA680691BFCD1BBCE2D82208 /* libPods-HZAVPlayer.a in Frameworks */,
+				65D64B232505E0FE00203119 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,14 +599,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P35S4B7K46;
+				DEVELOPMENT_TEAM = SFHGPCC8Q3;
 				INFOPLIST_FILE = HZAVPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.hepeng.HZAVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -615,16 +617,18 @@
 			baseConfigurationReference = 8EEED47F8825C343EB3BC895 /* Pods-HZAVPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P35S4B7K46;
+				DEVELOPMENT_TEAM = SFHGPCC8Q3;
 				INFOPLIST_FILE = HZAVPlayer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hepeng.HZAVPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.hepeng.HZAVPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
