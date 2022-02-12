@@ -14,9 +14,9 @@
 typedef NS_ENUM(NSInteger, HZAVPlayerLoadeState) {
     HZPlayerLoading, // 正在加载
     HZPlayerLoadFinish, // 加载完成
-    HZPlayerLoadEnd, //播放结束
-    HZPlayerLoadFaile,
-    HZPlayerLoadSuccess
+    HZPlayerEnd, //播放结束
+    HZPlayerFaile,
+    HZPlayerSuccess
 };
 
 typedef enum : NSUInteger {

@@ -82,15 +82,15 @@
 -(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HZPlayerLoadSuccess:{
+        case HZPlayerSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HZPlayerLoadEnd:{
+        case HZPlayerEnd:{
         }
             break;
-        case HZPlayerLoadFaile:{
+        case HZPlayerFaile:{
             
         }
             break;

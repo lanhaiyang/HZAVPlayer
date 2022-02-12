@@ -33,6 +33,9 @@
 + (NSTimeInterval)cahceWithAvailableDuration:(AVPlayer *)player {
     NSArray *loadedTimeRanges = [[player currentItem] loadedTimeRanges];
     CMTimeRange timeRange = [loadedTimeRanges.firstObject CMTimeRangeValue];// 获取缓冲区域
+    if (timeRange.start.value == 0 || timeRange.duration.value == 0) {
+        return 0;
+    }
     float startSeconds = CMTimeGetSeconds(timeRange.start);
     float durationSeconds = CMTimeGetSeconds(timeRange.duration);
     

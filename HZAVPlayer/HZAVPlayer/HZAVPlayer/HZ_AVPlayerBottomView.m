@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *endTime;
 @property (weak, nonatomic) IBOutlet UIButton *scaleBtn;
 @property (weak, nonatomic) IBOutlet UIProgressView *cacheProgress;
-
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @property(nonatomic,strong) UIView *gradView;
 
 @end
@@ -86,6 +86,10 @@
 
 -(void)action{
     
+    _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapGesture:)];
+//    _tapGesture.delegate = self;
+    [_playerProgress addGestureRecognizer:_tapGesture];
+    
     [_playerBtn addTarget:self
                    action:@selector(playerAction:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -100,7 +104,24 @@
                         action:@selector(slideProgressWithUp:) forControlEvents:UIControlEventTouchUpInside];
     [_playerProgress addTarget:self
                         action:@selector(slideProgressWithUp:) forControlEvents:UIControlEventTouchUpOutside];
+//    [_playerProgress addTarget:self action:@selector(progressActionTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
     
+}
+
+- (void)actionTapGesture:(UITapGestureRecognizer *)sender {
+    CGPoint touchPoint = [sender locationInView:_playerProgress];
+    CGFloat value = (_playerProgress.maximumValue - _playerProgress.minimumValue) * (touchPoint.x / _playerProgress.frame.size.width );
+    if ([self.delegate respondsToSelector:@selector(slideWithPointWithChange:)]) {
+        [self.delegate slideWithPointWithChange:_playerProgress.value];
+        [_playerProgress setValue:value animated:YES];
+    }
+}
+
+-(void)progressActionTouchUpOutside:(UISlider *)slide{
+    
+    if ([self.delegate respondsToSelector:@selector(slideWithPointWithChange:)]) {
+        [self.delegate slideWithPointWithChange:slide.value];
+    }
 }
 
 -(void)slideProgressWithChange:(UISlider *)slide{

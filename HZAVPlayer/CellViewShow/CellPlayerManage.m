@@ -176,19 +176,19 @@
 -(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HZPlayerLoadSuccess:{
+        case HZPlayerSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HZPlayerLoadEnd:{
+        case HZPlayerEnd:{
             
             if ([_delegate respondsToSelector:@selector(cellPlayerWithState:indexPath:)]) {
                 [_delegate cellPlayerWithState:HZ_ActionUserStopCellTV indexPath:_playeIndexPath];
             }
         }
             break;
-        case HZPlayerLoadFaile:{
+        case HZPlayerFaile:{
             
             if ([_delegate respondsToSelector:@selector(cellPlayerWithState:indexPath:)]) {
                 [_delegate cellPlayerWithState:HZ_ActionUserStopCellTV indexPath:_playeIndexPath];

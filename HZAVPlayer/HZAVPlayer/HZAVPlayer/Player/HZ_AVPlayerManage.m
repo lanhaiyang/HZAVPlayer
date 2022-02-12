@@ -209,35 +209,40 @@
     _playTimeObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 2) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
 //        NSLog(@"test 1");
         BOOL endState = NO;
-        __typeof__(WeakSelf) StrongSelf = WeakSelf;
+//        __typeof__(WeakSelf) StrongSelf = WeakSelf;
         
-        if (StrongSelf.playerItem == nil || StrongSelf.playerItem.error != nil) {
-            if (StrongSelf.isLog == YES) {
+        if (WeakSelf.playerItem == nil || WeakSelf.playerItem.error != nil) {
+            if (WeakSelf.isLog == YES) {
                 NSLog(@"❌ Discover playerItem is nil or error");
             }
             return;
         }
 
-        if (StrongSelf.touchStyle != HZTouchPlayerHorizontal) {
+        if (WeakSelf.touchStyle != HZTouchPlayerHorizontal) {
 
-            CGFloat endTime = [HZ_AVCacheProgress getPlayerWithLength:StrongSelf.playerItem];
-            if (StrongSelf.currentPlayTime >= endTime - 0.2 && endState == NO) {
+            CGFloat endTime = [HZ_AVCacheProgress getPlayerWithLength:WeakSelf.playerItem];
+            if (WeakSelf.currentPlayTime >= endTime - 0.2 && endState == NO) {
                 endState = YES;
-                [StrongSelf pause];
-                [StrongSelf playbackFinished];
+                [WeakSelf pause];
+                [WeakSelf playbackFinished];
 //                NSLog(@"===> pause");
                 return ;
             }
 
-            if (StrongSelf.currentPlayTime == 0 && StrongSelf.isPlay == NO) {
+            if (WeakSelf.currentPlayTime == 0 && WeakSelf.isPlay == NO) {
                 endState = NO;
             }
 
             // 更新slider, 如果正在滑动则不更新
-            if (StrongSelf.isSliding == NO && [StrongSelf.delegate respondsToSelector:@selector(playerWithCurrentTimeSecond:)]) {
+            if (WeakSelf.isSliding == NO && [WeakSelf.delegate respondsToSelector:@selector(playerWithCurrentTimeSecond:)]) {
                 // 当前播放秒
-                StrongSelf.currentPlayTime = CMTimeGetSeconds(time);
-                [StrongSelf.delegate playerWithCurrentTimeSecond:StrongSelf.currentPlayTime];
+
+                float changeTime = CMTimeGetSeconds(time);
+                if (changeTime >WeakSelf.durationLength) {
+                    changeTime = WeakSelf.durationLength;
+                }
+                WeakSelf.currentPlayTime = changeTime;
+                [WeakSelf.delegate playerWithCurrentTimeSecond:WeakSelf.currentPlayTime];
 //                StrongSelf.isPlay = YES;
             }
         } else {
@@ -277,6 +282,9 @@
 
 -(void)setCahceDuration:(NSTimeInterval)cacheTime playerLength:(CGFloat)totalDuration{
     
+    if (totalDuration == 0) {
+        return;
+    }
     float cacheTimeRate = cacheTime / totalDuration;
     if ([self.delegate respondsToSelector:@selector(playerWithCahceDuration:)]) {
         
@@ -521,7 +529,6 @@
         case HZ_AVPlayerOberverLikelyToKeepUp:{
             
             [self playerStatusLoadFinish];
-
         }
             break;
         case HZ_AVPlayerOberverBufferEmpty:{

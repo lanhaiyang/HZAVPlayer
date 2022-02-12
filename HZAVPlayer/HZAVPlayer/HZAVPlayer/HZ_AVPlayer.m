@@ -412,12 +412,12 @@
             
         }else if(loadState == HZAVPlayerLoadFinish){
             
-            if (self.isHandOpenPlaye == YES) {//外部播放
-                [self privatePlay];
-            }
+//            if (self.isHandOpenPlaye == YES) {//外部播放
+//                [self privatePlay];
+//            }
             [self.lineLoadAnimation removeFromSuperview];
         }
-        else if(loadState == HZPlayerLoadEnd){
+        else if(loadState == HZPlayerLoading){
             
             self.playerBottomView.playerState = YES;
             [self.lineLoadAnimation removeFromSuperview];

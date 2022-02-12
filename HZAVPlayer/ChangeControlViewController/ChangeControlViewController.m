@@ -49,6 +49,7 @@
     self.bottomView.bottomView.playerImage = player;
     
     NSString *url = @"http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.mp4";
+//    NSString *url = @"http://1251757278.vod2.myqcloud.com/0a17f9efvodcq1251757278/d3a682da387702295966409710/playlist_eof.m3u8";
     [self.avPlayer playerWithUrl:[NSURL URLWithString:url]];
 }
 
@@ -174,15 +175,15 @@
 -(BOOL)loadWithState:(HZAVPlayerLoadeState)loadState{
     
     switch (loadState) {
-        case HZPlayerLoadSuccess:{
+        case HZPlayerSuccess:{
             
             [self.avPlayer play];
         }
             break;
-        case HZPlayerLoadEnd:{
+        case HZPlayerEnd:{
         }
             break;
-        case HZPlayerLoadFaile:{
+        case HZPlayerFaile:{
             
         }
             break;
@@ -200,7 +201,7 @@
         _avPlayer.playerDelegate = self;
         _avPlayer.delegate = self;//这个可以选择不用调用
         
-        _avPlayer.isCache = YES; // 开启缓存
+        _avPlayer.isCache = NO; // 开启缓存
         
         _avPlayer.fillState = HZAVPlayerResizeAspect;
         _avPlayer.rotateView.backgroundColor = [UIColor blackColor];
