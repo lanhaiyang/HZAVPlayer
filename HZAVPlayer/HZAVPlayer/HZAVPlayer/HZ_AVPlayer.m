@@ -632,6 +632,11 @@
     _playerManage.isCache = isCache;
 }
 
+-(void)dealloc{
+    
+    [_playerManage stop];
+}
+
 #pragma mark - 懒加载
 
 

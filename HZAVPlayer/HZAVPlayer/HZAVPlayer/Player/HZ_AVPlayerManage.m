@@ -221,11 +221,14 @@
         if (WeakSelf.touchStyle != HZTouchPlayerHorizontal) {
 
             CGFloat endTime = [HZ_AVCacheProgress getPlayerWithLength:WeakSelf.playerItem];
-            if (WeakSelf.currentPlayTime >= endTime - 0.2 && endState == NO) {
+            if (WeakSelf.currentPlayTime >= endTime - 0.2 && endState == NO && WeakSelf.currentPlayTime != 0) {
                 endState = YES;
                 [WeakSelf pause];
                 [WeakSelf playbackFinished];
 //                NSLog(@"===> pause");
+                return ;
+            }else if(WeakSelf.currentPlayTime >= endTime - 0.2 && endState == NO){
+                endState = YES;
                 return ;
             }
 
@@ -259,20 +262,25 @@
 //    _playerItem = [notification object];
     // 是否无限循环
     
+    if (_currentPlayTime == 0) {//已经为0 无需重复设置
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
+    
     if (_cyclePlayer == NO) {
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
-            [self loadWithState:HZAVPlayerEnd];
-            [self updateChangePlayeWithTimeSecond:0];
+            [weakSelf loadWithState:HZAVPlayerEnd];
+            [weakSelf updateChangePlayeWithTimeSecond:0];
             [weakSelf pause];
         }]; // 跳转到初始
     }
     else{
         [_playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
 //            weakSelf.currentPlayTime = 0;
-            [self loadWithState:HZAVPlayerEnd];
-            [self updateChangePlayeWithTimeSecond:0];
+            [weakSelf loadWithState:HZAVPlayerEnd];
+            [weakSelf updateChangePlayeWithTimeSecond:0];
             [weakSelf play];
         }];
     }
@@ -346,43 +354,44 @@
 - (void)initAVElements:(NSString *)url videoName:(NSString *)videoName {
 
     [self playerStatusStartLoading];
+    __weak typeof(self) weakSelf = self;
     dispatch_async(self.playeQueue, ^{
         
         if (self.isCache == YES) {
-            AVURLAsset *videoAsset = [self generateAVURLAssetUrl:url videoName:videoName];
+            AVURLAsset *videoAsset = [weakSelf generateAVURLAssetUrl:url videoName:videoName];
             if (videoAsset == nil){
-                self.error = [NSError errorWithDomain:NSURLErrorDomain code:121 userInfo:@{NSLocalizedDescriptionKey:@"AVURLAsset is nil can url Analytical problem"}];
+                weakSelf.error = [NSError errorWithDomain:NSURLErrorDomain code:121 userInfo:@{NSLocalizedDescriptionKey:@"AVURLAsset is nil can url Analytical problem"}];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    [self playerStatusOccureError];
+                    [weakSelf playerStatusOccureError];
                 });
                 return;
             }
-            self.playerItem = [HZ_AVPlayerItem hz_playerItemWithAsset:videoAsset];
-            self.playerItem.hz_observer = self;
+            weakSelf.playerItem = [HZ_AVPlayerItem hz_playerItemWithAsset:videoAsset];
+            weakSelf.playerItem.hz_observer = weakSelf;
         } else{
-            self.playerItem = [HZ_AVPlayerItem hz_initWithURL:[NSURL URLWithString:url]];
-            self.playerItem.hz_observer = self;
+            weakSelf.playerItem = [HZ_AVPlayerItem hz_initWithURL:[NSURL URLWithString:url]];
+            weakSelf.playerItem.hz_observer = weakSelf;
         }
         
-        if (self.player == nil) {
-            self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
+        if (weakSelf.player == nil) {
+            weakSelf.player = [AVPlayer playerWithPlayerItem:weakSelf.playerItem];
             
-            self.playerLayer = nil;
+            weakSelf.playerLayer = nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self.superView.layer addSublayer:self.playerLayer];
+                [weakSelf.superView.layer addSublayer:weakSelf.playerLayer];
             });
-            self.player.muted = self.isMute;
-            self.url = url;
+            weakSelf.player.muted = self.isMute;
+            weakSelf.url = url;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            [self removeObserveAndNOtification];
+            [weakSelf removeObserveAndNOtification];
 //            [self playerStatusLoadFinish];
-            [self addObserverAndNotification]; // 添加观察者，发布通知
-            [self.player replaceCurrentItemWithPlayerItem:self.playerItem];
+            [weakSelf addObserverAndNotification]; // 添加观察者，发布通知
+            [weakSelf.player replaceCurrentItemWithPlayerItem:weakSelf.playerItem];
         });
     });
     
@@ -573,15 +582,15 @@
 
 - (void)removeObserveAndNOtification {
 
+    [_player removeTimeObserver:_playTimeObserver];
+    _playTimeObserver = nil;
+    _url = nil;
     if (_playTimeObserver == nil) {
         return;
     }
     
     [_player replaceCurrentItemWithPlayerItem:nil];
     
-    [_player removeTimeObserver:_playTimeObserver];
-    _playTimeObserver = nil;
-    _url = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
